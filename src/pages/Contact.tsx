@@ -148,7 +148,7 @@ const Contact = () => {
                 href="https://wa.me/201234567890"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-2xl font-semibold text-lg transition-all shadow-lg hover:shadow-xl w-full"
+                className="flex items-center justify-center gap-3 bg-primary-light hover:bg-primary text-primary-foreground px-6 py-4 rounded-2xl font-semibold text-lg transition-all shadow-lg hover:shadow-xl w-full"
               >
                 <MessageCircle className="h-6 w-6" />
                 {t('contact.whatsapp')}

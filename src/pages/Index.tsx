@@ -113,7 +113,7 @@ const Index = () => {
               href="https://wa.me/201234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-primary-light hover:bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all"
             >
               <MessageCircle className="h-5 w-5" />
               {t('cta.whatsapp')}
