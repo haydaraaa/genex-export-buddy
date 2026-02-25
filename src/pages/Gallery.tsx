@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const galleryItems = [
   { src: 'https://images.unsplash.com/photo-1573246123716-6b1782bfc499?w=600', category: 'products', alt: 'Fresh vegetables' },
@@ -31,55 +33,79 @@ const Gallery = () => {
     <div>
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">{t('gallery.title')}</h1>
-          <p className="text-primary-foreground/70 text-lg">{t('gallery.subtitle')}</p>
-          <div className="w-20 h-1 bg-accent mx-auto mt-4 rounded-full" />
+          <ScrollReveal direction="down">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">{t('gallery.title')}</h1>
+            <p className="text-primary-foreground/70 text-lg">{t('gallery.subtitle')}</p>
+            <div className="w-20 h-1 bg-accent mx-auto mt-4 rounded-full" />
+          </ScrollReveal>
         </div>
       </section>
 
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          {/* Filter */}
-          <div className="flex flex-wrap gap-3 justify-center mb-10">
-            {categories.map(cat => (
-              <button
-                key={cat}
-                onClick={() => setFilter(cat)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
-                  filter === cat
-                    ? 'bg-primary text-primary-foreground shadow-md'
-                    : 'bg-card text-muted-foreground border border-border hover:bg-muted'
-                }`}
-              >
-                {t(categoryKeys[cat])}
-              </button>
-            ))}
-          </div>
+          <ScrollReveal>
+            <div className="flex flex-wrap gap-3 justify-center mb-10">
+              {categories.map(cat => (
+                <button
+                  key={cat}
+                  onClick={() => setFilter(cat)}
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+                    filter === cat
+                      ? 'bg-primary text-primary-foreground shadow-md'
+                      : 'bg-card text-muted-foreground border border-border hover:bg-muted'
+                  }`}
+                >
+                  {t(categoryKeys[cat])}
+                </button>
+              ))}
+            </div>
+          </ScrollReveal>
 
-          {/* Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {filtered.map((item, i) => (
-              <div
-                key={i}
-                className="aspect-[4/3] rounded-xl overflow-hidden cursor-pointer hover:shadow-xl transition-all hover:scale-[1.02]"
-                onClick={() => setLightbox(item.src)}
-              >
-                <img src={item.src} alt={item.alt} className="w-full h-full object-cover" loading="lazy" />
-              </div>
-            ))}
-          </div>
+          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <AnimatePresence mode="popLayout">
+              {filtered.map((item, i) => (
+                <motion.div
+                  key={item.src}
+                  layout
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.35, delay: i * 0.05 }}
+                  className="aspect-[4/3] rounded-xl overflow-hidden cursor-pointer hover:shadow-xl transition-shadow"
+                  onClick={() => setLightbox(item.src)}
+                >
+                  <img src={item.src} alt={item.alt} className="w-full h-full object-cover" loading="lazy" />
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </motion.div>
         </div>
       </section>
 
       {/* Lightbox */}
-      {lightbox && (
-        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4" onClick={() => setLightbox(null)}>
-          <button className="absolute top-4 end-4 text-white/80 hover:text-white" onClick={() => setLightbox(null)}>
-            <X className="h-8 w-8" />
-          </button>
-          <img src={lightbox.replace('w=600', 'w=1200')} alt="" className="max-w-full max-h-[90vh] rounded-lg" />
-        </div>
-      )}
+      <AnimatePresence>
+        {lightbox && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+            onClick={() => setLightbox(null)}
+          >
+            <button className="absolute top-4 end-4 text-white/80 hover:text-white" onClick={() => setLightbox(null)}>
+              <X className="h-8 w-8" />
+            </button>
+            <motion.img
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              src={lightbox.replace('w=600', 'w=1200')}
+              alt=""
+              className="max-w-full max-h-[90vh] rounded-lg"
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

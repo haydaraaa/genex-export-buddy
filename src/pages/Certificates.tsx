@@ -1,5 +1,6 @@
 import { useLanguage } from '@/i18n/LanguageContext';
 import { ShieldCheck, Award, Leaf, CheckCircle, Star, FileCheck } from 'lucide-react';
+import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
 
 const Certificates = () => {
   const { t } = useLanguage();
@@ -17,25 +18,29 @@ const Certificates = () => {
     <div>
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">{t('certificates.title')}</h1>
-          <p className="text-primary-foreground/70 text-lg">{t('certificates.subtitle')}</p>
-          <div className="w-20 h-1 bg-accent mx-auto mt-4 rounded-full" />
+          <ScrollReveal direction="down">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">{t('certificates.title')}</h1>
+            <p className="text-primary-foreground/70 text-lg">{t('certificates.subtitle')}</p>
+            <div className="w-20 h-1 bg-accent mx-auto mt-4 rounded-full" />
+          </ScrollReveal>
         </div>
       </section>
 
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {certs.map((cert, i) => (
-              <div key={i} className="bg-card rounded-2xl border border-border p-8 text-center hover:shadow-xl hover:-translate-y-1 transition-all">
-                <div className="inline-flex p-4 bg-primary/10 rounded-full mb-4">
-                  <cert.icon className="h-10 w-10 text-primary" />
+              <StaggerItem key={i}>
+                <div className="bg-card rounded-2xl border border-border p-8 text-center hover:shadow-xl hover:-translate-y-1 transition-all">
+                  <div className="inline-flex p-4 bg-primary/10 rounded-full mb-4">
+                    <cert.icon className="h-10 w-10 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">{cert.name}</h3>
+                  <p className="text-muted-foreground">{cert.desc}</p>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">{cert.name}</h3>
-                <p className="text-muted-foreground">{cert.desc}</p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
     </div>
