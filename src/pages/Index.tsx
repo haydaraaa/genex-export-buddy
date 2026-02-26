@@ -1,18 +1,21 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { ArrowLeft, ArrowRight, MessageCircle, Apple, Carrot, Package, Globe, Calendar, ShoppingBag, Users } from 'lucide-react';
+import { ArrowLeft, ArrowRight, MessageCircle, Globe, Calendar, ShoppingBag, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
 import heroBg from '@/assets/hero-bg.jpg';
+import categoryFruits from '@/assets/category-fruits.jpg';
+import categoryVegetables from '@/assets/category-vegetables.jpg';
+import categoryCanned from '@/assets/category-canned.jpg';
 
 const Index = () => {
   const { t, isRtl } = useLanguage();
   const Arrow = isRtl ? ArrowLeft : ArrowRight;
 
   const categories = [
-    { icon: Apple, title: t('products.fruits'), desc: t('products.fruits.desc'), color: 'from-red-500/20 to-orange-500/20' },
-    { icon: Carrot, title: t('products.vegetables'), desc: t('products.vegetables.desc'), color: 'from-green-500/20 to-emerald-500/20' },
-    { icon: Package, title: t('products.canned'), desc: t('products.canned.desc'), color: 'from-amber-500/20 to-yellow-500/20' },
+    { title: t('products.fruits'), desc: t('products.fruits.desc'), img: categoryFruits, link: '/products/fruits' },
+    { title: t('products.vegetables'), desc: t('products.vegetables.desc'), img: categoryVegetables, link: '/products/vegetables' },
+    { title: t('products.canned'), desc: t('products.canned.desc'), img: categoryCanned, link: '/products/canned' },
   ];
 
   const stats = [
@@ -53,17 +56,11 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
-            >
+            <Link to="/contact" className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-lg hover:shadow-xl hover:scale-105">
               {t('hero.cta')}
               <Arrow className="h-5 w-5" />
             </Link>
-            <Link
-              to="/products"
-              className="inline-flex items-center justify-center gap-2 border-2 border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/10 transition-all"
-            >
+            <Link to="/products" className="inline-flex items-center justify-center gap-2 border-2 border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/10 transition-all">
               {t('hero.products')}
             </Link>
           </motion.div>
@@ -81,7 +78,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Product Categories */}
+      {/* Product Categories with real images */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <ScrollReveal>
@@ -91,11 +88,19 @@ const Index = () => {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {categories.map((cat, i) => (
               <StaggerItem key={i}>
-                <div className={`bg-gradient-to-br ${cat.color} rounded-2xl p-8 border border-border hover:shadow-xl transition-all hover:-translate-y-1`}>
-                  <cat.icon className="h-14 w-14 text-primary mb-6" />
-                  <h3 className="text-2xl font-bold text-foreground mb-3">{cat.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{cat.desc}</p>
-                </div>
+                <Link to={cat.link} className="block rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all hover:-translate-y-1 group bg-background">
+                  <div className="aspect-[16/10] overflow-hidden">
+                    <img src={cat.img} alt={cat.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold text-foreground mb-2">{cat.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed mb-3">{cat.desc}</p>
+                    <span className="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
+                      {isRtl ? 'عرض الكل' : 'View All'}
+                      <Arrow className="h-4 w-4" />
+                    </span>
+                  </div>
+                </Link>
               </StaggerItem>
             ))}
           </StaggerContainer>
@@ -125,19 +130,11 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{t('cta.title')}</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">{t('cta.text')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-lg hover:shadow-xl"
-            >
+            <Link to="/contact" className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-lg hover:shadow-xl">
               {t('cta.button')}
               <Arrow className="h-5 w-5" />
             </Link>
-            <a
-              href="https://wa.me/201234567890"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-primary-light hover:bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all"
-            >
+            <a href="https://wa.me/201234567890" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-light hover:bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all">
               <MessageCircle className="h-5 w-5" />
               {t('cta.whatsapp')}
             </a>

@@ -1,60 +1,19 @@
+import { Link } from 'react-router-dom';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Apple, Carrot, Package } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
-
-// Product images
-import orangeImg from '@/assets/products/orange.jpg';
-import strawberryImg from '@/assets/products/strawberry.jpg';
-import grapeImg from '@/assets/products/grape.jpg';
-import pomegranateImg from '@/assets/products/pomegranate.jpg';
-import mangoImg from '@/assets/products/mango.jpg';
-import guavaImg from '@/assets/products/guava.jpg';
-import tomatoImg from '@/assets/products/tomato.jpg';
-import pepperImg from '@/assets/products/pepper.jpg';
-import onionImg from '@/assets/products/onion.jpg';
-import potatoImg from '@/assets/products/potato.jpg';
-import beansImg from '@/assets/products/beans.jpg';
-import foulImg from '@/assets/products/foul.jpg';
-import lentilsImg from '@/assets/products/lentils.jpg';
-import chickpeasImg from '@/assets/products/chickpeas.jpg';
-import whiteBeansImg from '@/assets/products/whiteBeans.jpg';
+import categoryFruits from '@/assets/category-fruits.jpg';
+import categoryVegetables from '@/assets/category-vegetables.jpg';
+import categoryCanned from '@/assets/category-canned.jpg';
 
 const Products = () => {
-  const { t } = useLanguage();
+  const { t, isRtl } = useLanguage();
+  const Arrow = isRtl ? ArrowLeft : ArrowRight;
 
-  const fruits = ['orange', 'strawberry', 'grape', 'pomegranate', 'mango', 'guava'];
-  const vegetables = ['tomato', 'pepper', 'onion', 'potato', 'beans'];
-  const canned = ['foul', 'lentils', 'chickpeas', 'whiteBeans'];
-
-  const productImages: Record<string, string> = {
-    orange: orangeImg, strawberry: strawberryImg, grape: grapeImg,
-    pomegranate: pomegranateImg, mango: mangoImg, guava: guavaImg,
-    tomato: tomatoImg, pepper: pepperImg, onion: onionImg,
-    potato: potatoImg, beans: beansImg,
-    foul: foulImg, lentils: lentilsImg, chickpeas: chickpeasImg, whiteBeans: whiteBeansImg,
-  };
-
-  const ProductCard = ({ name }: { name: string }) => (
-    <div className="bg-background rounded-xl border border-border overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all group">
-      <div className="aspect-square overflow-hidden">
-        <img
-          src={productImages[name]}
-          alt={t(`product.${name}`)}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-          loading="lazy"
-        />
-      </div>
-      <div className="p-4 text-center">
-        <h3 className="text-lg font-bold text-foreground mb-1">{t(`product.${name}`)}</h3>
-        <p className="text-sm text-muted-foreground">{t(`product.${name}.desc`)}</p>
-      </div>
-    </div>
-  );
-
-  const sections = [
-    { icon: Apple, title: t('products.fruits.title'), items: fruits },
-    { icon: Carrot, title: t('products.vegetables.title'), items: vegetables },
-    { icon: Package, title: t('products.canned.title'), items: canned },
+  const categories = [
+    { key: 'fruits', title: t('products.fruits.title'), desc: t('products.fruits.desc'), img: categoryFruits, link: '/products/fruits' },
+    { key: 'vegetables', title: t('products.vegetables.title'), desc: t('products.vegetables.desc'), img: categoryVegetables, link: '/products/vegetables' },
+    { key: 'canned', title: t('products.canned.title'), desc: t('products.canned.desc'), img: categoryCanned, link: '/products/canned' },
   ];
 
   return (
@@ -69,25 +28,29 @@ const Products = () => {
         </div>
       </section>
 
-      {sections.map((section, si) => (
-        <section key={si} className={`py-16 ${si % 2 === 0 ? 'bg-background' : 'bg-card'}`}>
-          <div className="container mx-auto px-4">
-            <ScrollReveal>
-              <div className="flex items-center gap-3 mb-8 justify-center">
-                <section.icon className="h-8 w-8 text-primary" />
-                <h2 className="text-3xl font-bold text-foreground">{section.title}</h2>
-              </div>
-            </ScrollReveal>
-            <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-              {section.items.map(item => (
-                <StaggerItem key={item}>
-                  <ProductCard name={item} />
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
-          </div>
-        </section>
-      ))}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {categories.map(cat => (
+              <StaggerItem key={cat.key}>
+                <Link to={cat.link} className="block bg-card rounded-2xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                  <div className="aspect-[16/10] overflow-hidden">
+                    <img src={cat.img} alt={cat.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                  </div>
+                  <div className="p-6">
+                    <h2 className="text-2xl font-bold text-foreground mb-2">{cat.title}</h2>
+                    <p className="text-muted-foreground mb-4 leading-relaxed">{cat.desc}</p>
+                    <span className="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
+                      {t('products.viewAll') || (isRtl ? 'عرض الكل' : 'View All')}
+                      <Arrow className="h-4 w-4" />
+                    </span>
+                  </div>
+                </Link>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
     </div>
   );
 };
