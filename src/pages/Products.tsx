@@ -2,6 +2,23 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { Apple, Carrot, Package } from 'lucide-react';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
 
+// Product images
+import orangeImg from '@/assets/products/orange.jpg';
+import strawberryImg from '@/assets/products/strawberry.jpg';
+import grapeImg from '@/assets/products/grape.jpg';
+import pomegranateImg from '@/assets/products/pomegranate.jpg';
+import mangoImg from '@/assets/products/mango.jpg';
+import guavaImg from '@/assets/products/guava.jpg';
+import tomatoImg from '@/assets/products/tomato.jpg';
+import pepperImg from '@/assets/products/pepper.jpg';
+import onionImg from '@/assets/products/onion.jpg';
+import potatoImg from '@/assets/products/potato.jpg';
+import beansImg from '@/assets/products/beans.jpg';
+import foulImg from '@/assets/products/foul.jpg';
+import lentilsImg from '@/assets/products/lentils.jpg';
+import chickpeasImg from '@/assets/products/chickpeas.jpg';
+import whiteBeansImg from '@/assets/products/whiteBeans.jpg';
+
 const Products = () => {
   const { t } = useLanguage();
 
@@ -9,22 +26,35 @@ const Products = () => {
   const vegetables = ['tomato', 'pepper', 'onion', 'potato', 'beans'];
   const canned = ['foul', 'lentils', 'chickpeas', 'whiteBeans'];
 
-  const fruitEmojis: Record<string, string> = { orange: '🍊', strawberry: '🍓', grape: '🍇', pomegranate: '🔴', mango: '🥭', guava: '🍐' };
-  const vegEmojis: Record<string, string> = { tomato: '🍅', pepper: '🌶️', onion: '🧅', potato: '🥔', beans: '🫘' };
-  const cannedEmojis: Record<string, string> = { foul: '🫘', lentils: '🟤', chickpeas: '🟡', whiteBeans: '⚪' };
+  const productImages: Record<string, string> = {
+    orange: orangeImg, strawberry: strawberryImg, grape: grapeImg,
+    pomegranate: pomegranateImg, mango: mangoImg, guava: guavaImg,
+    tomato: tomatoImg, pepper: pepperImg, onion: onionImg,
+    potato: potatoImg, beans: beansImg,
+    foul: foulImg, lentils: lentilsImg, chickpeas: chickpeasImg, whiteBeans: whiteBeansImg,
+  };
 
-  const ProductCard = ({ name, emoji }: { name: string; emoji: string }) => (
-    <div className="bg-background rounded-xl border border-border p-6 hover:shadow-lg hover:-translate-y-1 transition-all">
-      <div className="text-5xl mb-4">{emoji}</div>
-      <h3 className="text-lg font-bold text-foreground mb-1">{t(`product.${name}`)}</h3>
-      <p className="text-sm text-muted-foreground">{t(`product.${name}.desc`)}</p>
+  const ProductCard = ({ name }: { name: string }) => (
+    <div className="bg-background rounded-xl border border-border overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all group">
+      <div className="aspect-square overflow-hidden">
+        <img
+          src={productImages[name]}
+          alt={t(`product.${name}`)}
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          loading="lazy"
+        />
+      </div>
+      <div className="p-4 text-center">
+        <h3 className="text-lg font-bold text-foreground mb-1">{t(`product.${name}`)}</h3>
+        <p className="text-sm text-muted-foreground">{t(`product.${name}.desc`)}</p>
+      </div>
     </div>
   );
 
   const sections = [
-    { icon: Apple, title: t('products.fruits.title'), items: fruits, emojis: fruitEmojis },
-    { icon: Carrot, title: t('products.vegetables.title'), items: vegetables, emojis: vegEmojis },
-    { icon: Package, title: t('products.canned.title'), items: canned, emojis: cannedEmojis },
+    { icon: Apple, title: t('products.fruits.title'), items: fruits },
+    { icon: Carrot, title: t('products.vegetables.title'), items: vegetables },
+    { icon: Package, title: t('products.canned.title'), items: canned },
   ];
 
   return (
@@ -51,7 +81,7 @@ const Products = () => {
             <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
               {section.items.map(item => (
                 <StaggerItem key={item}>
-                  <ProductCard name={item} emoji={section.emojis[item] || '📦'} />
+                  <ProductCard name={item} />
                 </StaggerItem>
               ))}
             </StaggerContainer>
