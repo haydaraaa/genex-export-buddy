@@ -5,6 +5,8 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/Scroll
 import categoryFruits from '@/assets/category-fruits.jpg';
 import categoryVegetables from '@/assets/category-vegetables.jpg';
 import categoryCanned from '@/assets/category-canned.jpg';
+import categoryDates from '@/assets/category-dates.jpg';
+import categoryJuices from '@/assets/category-juices.jpg';
 
 const Products = () => {
   const { t, isRtl } = useLanguage();
@@ -14,6 +16,8 @@ const Products = () => {
     { key: 'fruits', title: t('products.fruits.title'), desc: t('products.fruits.desc'), img: categoryFruits, link: '/products/fruits' },
     { key: 'vegetables', title: t('products.vegetables.title'), desc: t('products.vegetables.desc'), img: categoryVegetables, link: '/products/vegetables' },
     { key: 'canned', title: t('products.canned.title'), desc: t('products.canned.desc'), img: categoryCanned, link: '/products/canned' },
+    { key: 'dates', title: t('products.dates.title'), desc: t('products.dates.desc'), img: categoryDates, link: '/products/dates' },
+    { key: 'juices', title: t('products.juices.title'), desc: t('products.juices.desc'), img: categoryJuices, link: '/products/juices' },
   ];
 
   return (
@@ -30,7 +34,7 @@ const Products = () => {
 
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {categories.map(cat => (
               <StaggerItem key={cat.key}>
                 <Link to={cat.link} className="block bg-card rounded-2xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">

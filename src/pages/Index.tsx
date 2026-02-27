@@ -7,6 +7,8 @@ import heroBg from '@/assets/hero-bg.jpg';
 import categoryFruits from '@/assets/category-fruits.jpg';
 import categoryVegetables from '@/assets/category-vegetables.jpg';
 import categoryCanned from '@/assets/category-canned.jpg';
+import categoryDates from '@/assets/category-dates.jpg';
+import categoryJuices from '@/assets/category-juices.jpg';
 
 const Index = () => {
   const { t, isRtl } = useLanguage();
@@ -16,6 +18,8 @@ const Index = () => {
     { title: t('products.fruits'), desc: t('products.fruits.desc'), img: categoryFruits, link: '/products/fruits' },
     { title: t('products.vegetables'), desc: t('products.vegetables.desc'), img: categoryVegetables, link: '/products/vegetables' },
     { title: t('products.canned'), desc: t('products.canned.desc'), img: categoryCanned, link: '/products/canned' },
+    { title: t('products.dates'), desc: t('products.dates.desc'), img: categoryDates, link: '/products/dates' },
+    { title: t('products.juices'), desc: t('products.juices.desc'), img: categoryJuices, link: '/products/juices' },
   ];
 
   const stats = [
@@ -85,7 +89,7 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-4">{t('products.title')}</h2>
             <div className="w-20 h-1 bg-accent mx-auto mb-12 rounded-full" />
           </ScrollReveal>
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((cat, i) => (
               <StaggerItem key={i}>
                 <Link to={cat.link} className="block rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all hover:-translate-y-1 group bg-background">
