@@ -18,6 +18,7 @@ import Certificates from "./pages/Certificates";
 import Gallery from "./pages/Gallery";
 import Partners from "./pages/Partners";
 import Contact from "./pages/Contact";
+import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,6 +45,7 @@ const App = () => (
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/partners" element={<Partners />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/product/:productId" element={<ProductDetail />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useLanguage } from '@/i18n/LanguageContext';
 import genexLogo from '@/assets/logo.png';
 
@@ -10,7 +11,7 @@ const ProductCard = ({ name, img }: ProductCardProps) => {
   const { t } = useLanguage();
 
   return (
-    <div className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+    <Link to={`/product/${name}`} className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group block">
       <div className="aspect-square overflow-hidden relative">
         <img src={img} alt={t(`product.${name}`)} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
         {/* Logo watermark */}
@@ -22,7 +23,7 @@ const ProductCard = ({ name, img }: ProductCardProps) => {
         <h3 className="text-xl font-bold text-foreground mb-2">{t(`product.${name}`)}</h3>
         <p className="text-muted-foreground leading-relaxed">{t(`product.${name}.desc`)}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 
