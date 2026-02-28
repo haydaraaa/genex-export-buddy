@@ -28,7 +28,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img src={genexLogo} alt="GENEX" className="h-14 w-auto" />
+            <img src={genexLogo} alt="GENEX" className="h-28 w-auto" />
           </Link>
 
           {/* Desktop Nav */}
