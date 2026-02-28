@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src={genexLogo} alt="GENEX" className="h-14 w-auto" />
+              <img src={genexLogo} alt="GENEX" className="h-28 w-auto" />
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               {t('footer.desc')}
