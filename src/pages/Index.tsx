@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, MessageCircle, Globe, Calendar, ShoppingBag, Use
 import { motion } from 'framer-motion';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
 import heroBg from '@/assets/hero-bg.jpg';
+import genexLogo from '@/assets/logo.png';
 import categoryFruits from '@/assets/category-fruits.jpg';
 import categoryVegetables from '@/assets/category-vegetables.jpg';
 import categoryCanned from '@/assets/category-canned.jpg';
@@ -38,10 +39,18 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-primary/90" />
         </div>
         <div className="relative container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="mb-6"
+          >
+            <img src={genexLogo} alt="GENEX" className="h-32 md:h-44 w-auto mx-auto drop-shadow-2xl" />
+          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="text-5xl md:text-7xl font-black text-primary-foreground mb-6 drop-shadow-2xl"
           >
             {t('hero.title')}

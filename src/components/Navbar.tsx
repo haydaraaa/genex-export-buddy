@@ -25,15 +25,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md shadow-lg">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <img src={genexLogo} alt="GENEX" className="h-28 w-auto" />
-          </Link>
-
-          {/* Desktop Nav */}
+        <div className="flex items-center justify-between h-20">
+          {/* Desktop Nav - Left */}
           <div className="hidden lg:flex items-center gap-1">
-            {navLinks.map(link => (
+            {navLinks.slice(0, 4).map(link => (
               <Link
                 key={link.path}
                 to={link.path}
@@ -47,6 +42,31 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
+
+          {/* Logo - Center */}
+          <Link to="/" className="flex items-center">
+            <img src={genexLogo} alt="GENEX" className="h-36 w-auto" />
+          </Link>
+
+          {/* Desktop Nav - Right */}
+          <div className="hidden lg:flex items-center gap-1">
+            {navLinks.slice(4).map(link => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  location.pathname === link.path
+                    ? 'bg-primary-glow/20 text-primary-glow'
+                    : 'text-primary-foreground/80 hover:text-primary-glow hover:bg-primary-foreground/5'
+                }`}
+              >
+                {t(link.key)}
+              </Link>
+            ))}
+          </div>
+
+
+
 
           {/* Language + Mobile toggle */}
           <div className="flex items-center gap-2">

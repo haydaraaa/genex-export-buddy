@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { ArrowLeft } from 'lucide-react';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
+import ProductCard from '@/components/ProductCard';
 import categoryHero from '@/assets/category-vegetables.jpg';
 import tomatoImg from '@/assets/products/tomato.jpg';
 import pepperImg from '@/assets/products/pepper.jpg';
@@ -51,15 +52,7 @@ const Vegetables = () => {
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {products.map(p => (
               <StaggerItem key={p.name}>
-                <div className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
-                  <div className="aspect-square overflow-hidden">
-                    <img src={p.img} alt={t(`product.${p.name}`)} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-foreground mb-2">{t(`product.${p.name}`)}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{t(`product.${p.name}.desc`)}</p>
-                  </div>
-                </div>
+                <ProductCard name={p.name} img={p.img} />
               </StaggerItem>
             ))}
           </StaggerContainer>
