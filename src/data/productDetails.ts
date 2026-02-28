@@ -1,0 +1,342 @@
+// Product detail data with EU specifications
+import orangeImg from '@/assets/products/orange.jpg';
+import strawberryImg from '@/assets/products/strawberry.jpg';
+import grapeImg from '@/assets/products/grape.jpg';
+import pomegranateImg from '@/assets/products/pomegranate.jpg';
+import mangoImg from '@/assets/products/mango.jpg';
+import guavaImg from '@/assets/products/guava.jpg';
+import tomatoImg from '@/assets/products/tomato.jpg';
+import pepperImg from '@/assets/products/pepper.jpg';
+import onionImg from '@/assets/products/onion.jpg';
+import potatoImg from '@/assets/products/potato.jpg';
+import beansImg from '@/assets/products/beans.jpg';
+import foulImg from '@/assets/products/foul.jpg';
+import lentilsImg from '@/assets/products/lentils.jpg';
+import chickpeasImg from '@/assets/products/chickpeas.jpg';
+import whiteBeansImg from '@/assets/products/whiteBeans.jpg';
+import medjoolImg from '@/assets/products/medjool.jpg';
+import ajwaImg from '@/assets/products/ajwa.jpg';
+import sukkariImg from '@/assets/products/sukkari.jpg';
+import barhiImg from '@/assets/products/barhi.jpg';
+import degletnoorImg from '@/assets/products/degletnoor.jpg';
+import saidiImg from '@/assets/products/saidi.jpg';
+import juiceOrangeImg from '@/assets/products/juice-orange.jpg';
+import juiceMangoImg from '@/assets/products/juice-mango.jpg';
+import juiceGuavaImg from '@/assets/products/juice-guava.jpg';
+import juiceStrawberryImg from '@/assets/products/juice-strawberry.jpg';
+import juicePomegranateImg from '@/assets/products/juice-pomegranate.jpg';
+import juiceMixedImg from '@/assets/products/juice-mixed.jpg';
+
+export interface ProductDetail {
+  id: string;
+  img: string;
+  category: 'fruits' | 'vegetables' | 'canned' | 'dates' | 'juices';
+  certificates: string[];
+  euStandard: string;
+  shelfLife: string;
+  storage: string;
+  packaging: string[];
+  origin: string;
+  season: string;
+  grade: string;
+}
+
+export const productDetails: Record<string, ProductDetail> = {
+  orange: {
+    id: 'orange', img: orangeImg, category: 'fruits',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP', 'Organic'],
+    euStandard: 'EU Reg. 543/2011 - Class Extra / Class I',
+    shelfLife: '4-6 weeks',
+    storage: '3-7°C, 85-90% RH',
+    packaging: ['10 kg carton', '15 kg carton', 'Open top carton'],
+    origin: 'Nile Delta, Egypt',
+    season: 'November - May',
+    grade: 'Premium Export Grade A',
+  },
+  strawberry: {
+    id: 'strawberry', img: strawberryImg, category: 'fruits',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class Extra / Class I',
+    shelfLife: '7-10 days',
+    storage: '0-2°C, 90-95% RH',
+    packaging: ['250g punnet', '500g punnet', '2.5 kg flat'],
+    origin: 'Ismailia, Egypt',
+    season: 'December - April',
+    grade: 'Premium Export Grade A',
+  },
+  grape: {
+    id: 'grape', img: grapeImg, category: 'fruits',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class Extra / Class I',
+    shelfLife: '3-5 weeks',
+    storage: '-1 to 0°C, 90-95% RH',
+    packaging: ['4.5 kg carton', '8 kg carton'],
+    origin: 'Upper Egypt',
+    season: 'June - October',
+    grade: 'Premium Export Grade A',
+  },
+  pomegranate: {
+    id: 'pomegranate', img: pomegranateImg, category: 'fruits',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '2-3 months',
+    storage: '5-7°C, 90-95% RH',
+    packaging: ['3.5 kg carton', '5 kg carton'],
+    origin: 'Assiut, Egypt',
+    season: 'September - January',
+    grade: 'Premium Export Grade A',
+  },
+  mango: {
+    id: 'mango', img: mangoImg, category: 'fruits',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '2-3 weeks',
+    storage: '10-13°C, 85-90% RH',
+    packaging: ['4 kg carton', '7 kg carton'],
+    origin: 'Ismailia, Egypt',
+    season: 'July - October',
+    grade: 'Premium Export Grade A',
+  },
+  guava: {
+    id: 'guava', img: guavaImg, category: 'fruits',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '2-3 weeks',
+    storage: '8-10°C, 90% RH',
+    packaging: ['3 kg carton', '5 kg carton'],
+    origin: 'Qalyubia, Egypt',
+    season: 'September - January',
+    grade: 'Premium Export Grade A',
+  },
+  tomato: {
+    id: 'tomato', img: tomatoImg, category: 'vegetables',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class Extra / Class I',
+    shelfLife: '2-3 weeks',
+    storage: '12-15°C, 85-90% RH',
+    packaging: ['5 kg carton', '6 kg carton', '10 kg carton'],
+    origin: 'Nile Delta, Egypt',
+    season: 'Year-round',
+    grade: 'Premium Export Grade A',
+  },
+  pepper: {
+    id: 'pepper', img: pepperImg, category: 'vegetables',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '2-3 weeks',
+    storage: '7-10°C, 90-95% RH',
+    packaging: ['5 kg carton', '10 kg carton'],
+    origin: 'Beheira, Egypt',
+    season: 'Year-round',
+    grade: 'Premium Export Grade A',
+  },
+  onion: {
+    id: 'onion', img: onionImg, category: 'vegetables',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '3-6 months',
+    storage: '0-2°C, 65-70% RH',
+    packaging: ['10 kg mesh bag', '25 kg mesh bag'],
+    origin: 'Beni Suef, Egypt',
+    season: 'February - June',
+    grade: 'Premium Export Grade A',
+  },
+  potato: {
+    id: 'potato', img: potatoImg, category: 'vegetables',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '3-5 months',
+    storage: '4-8°C, 90-95% RH',
+    packaging: ['10 kg carton', '25 kg mesh bag'],
+    origin: 'Nubaria, Egypt',
+    season: 'January - May, September - December',
+    grade: 'Premium Export Grade A',
+  },
+  beans: {
+    id: 'beans', img: beansImg, category: 'vegetables',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '7-12 days',
+    storage: '4-7°C, 95% RH',
+    packaging: ['4 kg carton', '5 kg carton'],
+    origin: 'Qalyubia, Egypt',
+    season: 'October - May',
+    grade: 'Premium Export Grade A',
+  },
+  foul: {
+    id: 'foul', img: foulImg, category: 'canned',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Reg. 1169/2011 - Food Labeling',
+    shelfLife: '36 months',
+    storage: 'Room temperature, dry place',
+    packaging: ['400g can', '800g can', '2.5 kg can'],
+    origin: 'Cairo, Egypt',
+    season: 'Year-round',
+    grade: 'Premium Grade A',
+  },
+  lentils: {
+    id: 'lentils', img: lentilsImg, category: 'canned',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Reg. 1169/2011 - Food Labeling',
+    shelfLife: '36 months',
+    storage: 'Room temperature, dry place',
+    packaging: ['400g can', '800g can'],
+    origin: 'Upper Egypt',
+    season: 'Year-round',
+    grade: 'Premium Grade A',
+  },
+  chickpeas: {
+    id: 'chickpeas', img: chickpeasImg, category: 'canned',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Reg. 1169/2011 - Food Labeling',
+    shelfLife: '36 months',
+    storage: 'Room temperature, dry place',
+    packaging: ['400g can', '800g can', '2.5 kg can'],
+    origin: 'Cairo, Egypt',
+    season: 'Year-round',
+    grade: 'Premium Grade A',
+  },
+  whiteBeans: {
+    id: 'whiteBeans', img: whiteBeansImg, category: 'canned',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Reg. 1169/2011 - Food Labeling',
+    shelfLife: '36 months',
+    storage: 'Room temperature, dry place',
+    packaging: ['400g can', '800g can'],
+    origin: 'Cairo, Egypt',
+    season: 'Year-round',
+    grade: 'Premium Grade A',
+  },
+  medjool: {
+    id: 'medjool', img: medjoolImg, category: 'dates',
+    certificates: ['ISO 22000', 'HACCP', 'Organic', 'Halal'],
+    euStandard: 'EU Reg. 1169/2011 - Class Extra',
+    shelfLife: '12-18 months',
+    storage: '-18 to 5°C',
+    packaging: ['500g box', '1 kg box', '5 kg carton'],
+    origin: 'Siwa Oasis, Egypt',
+    season: 'September - November',
+    grade: 'Jumbo Premium Grade',
+  },
+  ajwa: {
+    id: 'ajwa', img: ajwaImg, category: 'dates',
+    certificates: ['ISO 22000', 'HACCP', 'Halal'],
+    euStandard: 'EU Reg. 1169/2011',
+    shelfLife: '12-18 months',
+    storage: '-18 to 5°C',
+    packaging: ['500g box', '1 kg box', '5 kg carton'],
+    origin: 'Egypt',
+    season: 'August - October',
+    grade: 'Premium Grade A',
+  },
+  sukkari: {
+    id: 'sukkari', img: sukkariImg, category: 'dates',
+    certificates: ['ISO 22000', 'HACCP', 'Halal'],
+    euStandard: 'EU Reg. 1169/2011',
+    shelfLife: '12-18 months',
+    storage: '-18 to 5°C',
+    packaging: ['500g box', '1 kg box', '5 kg carton'],
+    origin: 'Egypt',
+    season: 'August - October',
+    grade: 'Premium Grade A',
+  },
+  barhi: {
+    id: 'barhi', img: barhiImg, category: 'dates',
+    certificates: ['ISO 22000', 'HACCP', 'Halal'],
+    euStandard: 'EU Reg. 1169/2011',
+    shelfLife: '6-12 months',
+    storage: '0-5°C',
+    packaging: ['500g box', '1 kg box'],
+    origin: 'Egypt',
+    season: 'September - November',
+    grade: 'Premium Grade A',
+  },
+  degletnoor: {
+    id: 'degletnoor', img: degletnoorImg, category: 'dates',
+    certificates: ['ISO 22000', 'HACCP', 'Halal'],
+    euStandard: 'EU Reg. 1169/2011',
+    shelfLife: '18-24 months',
+    storage: 'Room temperature, dry place',
+    packaging: ['500g box', '1 kg box', '5 kg carton'],
+    origin: 'Egypt',
+    season: 'October - December',
+    grade: 'Premium Grade A',
+  },
+  saidi: {
+    id: 'saidi', img: saidiImg, category: 'dates',
+    certificates: ['ISO 22000', 'HACCP', 'Halal'],
+    euStandard: 'EU Reg. 1169/2011',
+    shelfLife: '12-18 months',
+    storage: 'Room temperature, dry place',
+    packaging: ['1 kg box', '5 kg carton', '10 kg carton'],
+    origin: 'Upper Egypt',
+    season: 'October - December',
+    grade: 'Premium Grade A',
+  },
+  juiceOrange: {
+    id: 'juiceOrange', img: juiceOrangeImg, category: 'juices',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Directive 2012/12/EU - Fruit Juices',
+    shelfLife: '12 months',
+    storage: 'Room temperature, away from sunlight',
+    packaging: ['200ml Tetra Pak', '1L Tetra Pak', '1L Glass bottle'],
+    origin: 'Cairo, Egypt',
+    season: 'Year-round',
+    grade: '100% Natural - No Preservatives',
+  },
+  juiceMango: {
+    id: 'juiceMango', img: juiceMangoImg, category: 'juices',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Directive 2012/12/EU - Fruit Juices',
+    shelfLife: '12 months',
+    storage: 'Room temperature, away from sunlight',
+    packaging: ['200ml Tetra Pak', '1L Tetra Pak'],
+    origin: 'Cairo, Egypt',
+    season: 'Year-round',
+    grade: '100% Natural - No Preservatives',
+  },
+  juiceGuava: {
+    id: 'juiceGuava', img: juiceGuavaImg, category: 'juices',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Directive 2012/12/EU - Fruit Juices',
+    shelfLife: '12 months',
+    storage: 'Room temperature, away from sunlight',
+    packaging: ['200ml Tetra Pak', '1L Tetra Pak'],
+    origin: 'Cairo, Egypt',
+    season: 'Year-round',
+    grade: '100% Natural - No Preservatives',
+  },
+  juiceStrawberry: {
+    id: 'juiceStrawberry', img: juiceStrawberryImg, category: 'juices',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Directive 2012/12/EU - Fruit Juices',
+    shelfLife: '12 months',
+    storage: 'Room temperature, away from sunlight',
+    packaging: ['200ml Tetra Pak', '1L Tetra Pak'],
+    origin: 'Cairo, Egypt',
+    season: 'Year-round',
+    grade: '100% Natural - No Preservatives',
+  },
+  juicePomegranate: {
+    id: 'juicePomegranate', img: juicePomegranateImg, category: 'juices',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Directive 2012/12/EU - Fruit Juices',
+    shelfLife: '12 months',
+    storage: 'Room temperature, away from sunlight',
+    packaging: ['200ml Tetra Pak', '1L Tetra Pak'],
+    origin: 'Cairo, Egypt',
+    season: 'Year-round',
+    grade: '100% Natural - No Preservatives',
+  },
+  juiceMixed: {
+    id: 'juiceMixed', img: juiceMixedImg, category: 'juices',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Directive 2012/12/EU - Fruit Juices',
+    shelfLife: '12 months',
+    storage: 'Room temperature, away from sunlight',
+    packaging: ['200ml Tetra Pak', '1L Tetra Pak'],
+    origin: 'Cairo, Egypt',
+    season: 'Year-round',
+    grade: '100% Natural - No Preservatives',
+  },
+};
