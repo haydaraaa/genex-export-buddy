@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { languages, Language } from '@/i18n/translations';
-import { Menu, X, Globe, Leaf } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
+import genexLogo from '@/assets/logo.png';
 
 const navLinks = [
   { key: 'nav.home', path: '/' },
@@ -27,8 +28,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <Leaf className="h-8 w-8 text-primary-glow" />
-            <span className="text-2xl font-bold text-primary-foreground tracking-wider">GENEX</span>
+            <img src={genexLogo} alt="GENEX" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Nav */}

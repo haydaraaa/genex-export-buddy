@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Leaf, Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import genexLogo from '@/assets/logo.png';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -12,8 +13,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Leaf className="h-8 w-8 text-primary-glow" />
-              <span className="text-2xl font-bold tracking-wider">GENEX</span>
+              <img src={genexLogo} alt="GENEX" className="h-10 w-auto" />
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               {t('footer.desc')}
