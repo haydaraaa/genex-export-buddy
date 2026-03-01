@@ -9,6 +9,12 @@ import pepperImg from '@/assets/products/pepper.jpg';
 import onionImg from '@/assets/products/onion.jpg';
 import potatoImg from '@/assets/products/potato.jpg';
 import beansImg from '@/assets/products/beans.jpg';
+import cucumberImg from '@/assets/products/cucumber.jpg';
+import zucchiniImg from '@/assets/products/zucchini.jpg';
+import eggplantImg from '@/assets/products/eggplant.jpg';
+import carrotImg from '@/assets/products/carrot.jpg';
+import cabbageImg from '@/assets/products/cabbage.jpg';
+import lettuceImg from '@/assets/products/lettuce.jpg';
 
 const Vegetables = () => {
   const { t, isRtl } = useLanguage();
@@ -19,6 +25,12 @@ const Vegetables = () => {
     { name: 'onion', img: onionImg },
     { name: 'potato', img: potatoImg },
     { name: 'beans', img: beansImg },
+    { name: 'cucumber', img: cucumberImg },
+    { name: 'zucchini', img: zucchiniImg },
+    { name: 'eggplant', img: eggplantImg },
+    { name: 'carrot', img: carrotImg },
+    { name: 'cabbage', img: cabbageImg },
+    { name: 'lettuce', img: lettuceImg },
   ];
 
   return (
