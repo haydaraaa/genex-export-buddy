@@ -10,6 +10,12 @@ import pepperImg from '@/assets/products/pepper.jpg';
 import onionImg from '@/assets/products/onion.jpg';
 import potatoImg from '@/assets/products/potato.jpg';
 import beansImg from '@/assets/products/beans.jpg';
+import cucumberImg from '@/assets/products/cucumber.jpg';
+import zucchiniImg from '@/assets/products/zucchini.jpg';
+import eggplantImg from '@/assets/products/eggplant.jpg';
+import carrotImg from '@/assets/products/carrot.jpg';
+import cabbageImg from '@/assets/products/cabbage.jpg';
+import lettuceImg from '@/assets/products/lettuce.jpg';
 import foulImg from '@/assets/products/foul.jpg';
 import lentilsImg from '@/assets/products/lentils.jpg';
 import chickpeasImg from '@/assets/products/chickpeas.jpg';
@@ -161,6 +167,72 @@ export const productDetails: Record<string, ProductDetail> = {
     packaging: ['4 kg carton', '5 kg carton'],
     origin: 'Qalyubia, Egypt',
     season: 'October - May',
+    grade: 'Premium Export Grade A',
+  },
+  cucumber: {
+    id: 'cucumber', img: cucumberImg, category: 'vegetables',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '10-14 days',
+    storage: '10-12°C, 90-95% RH',
+    packaging: ['5 kg carton', '6 kg carton'],
+    origin: 'Sharqia, Egypt',
+    season: 'Year-round',
+    grade: 'Premium Export Grade A',
+  },
+  zucchini: {
+    id: 'zucchini', img: zucchiniImg, category: 'vegetables',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '10-14 days',
+    storage: '5-10°C, 90-95% RH',
+    packaging: ['5 kg carton', '10 kg carton'],
+    origin: 'Beheira, Egypt',
+    season: 'Year-round',
+    grade: 'Premium Export Grade A',
+  },
+  eggplant: {
+    id: 'eggplant', img: eggplantImg, category: 'vegetables',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '7-10 days',
+    storage: '10-12°C, 90-95% RH',
+    packaging: ['5 kg carton', '7 kg carton'],
+    origin: 'Minya, Egypt',
+    season: 'Year-round',
+    grade: 'Premium Export Grade A',
+  },
+  carrot: {
+    id: 'carrot', img: carrotImg, category: 'vegetables',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '4-6 weeks',
+    storage: '0-1°C, 95-98% RH',
+    packaging: ['10 kg carton', '12 kg mesh bag'],
+    origin: 'Fayoum, Egypt',
+    season: 'October - April',
+    grade: 'Premium Export Grade A',
+  },
+  cabbage: {
+    id: 'cabbage', img: cabbageImg, category: 'vegetables',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '3-6 weeks',
+    storage: '0-2°C, 95-98% RH',
+    packaging: ['10 kg carton', '20 kg carton'],
+    origin: 'Nile Delta, Egypt',
+    season: 'October - March',
+    grade: 'Premium Export Grade A',
+  },
+  lettuce: {
+    id: 'lettuce', img: lettuceImg, category: 'vegetables',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '7-14 days',
+    storage: '0-2°C, 95-98% RH',
+    packaging: ['6 head carton', '12 head carton'],
+    origin: 'Qalyubia, Egypt',
+    season: 'October - April',
     grade: 'Premium Export Grade A',
   },
   foul: {
