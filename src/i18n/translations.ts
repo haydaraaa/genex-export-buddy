@@ -11,6 +11,7 @@ export const translations: Record<Language, Record<string, string>> = {
   ar: {
     // Nav
     'nav.home': 'الرئيسية',
+    'topbar.location': 'سموحة، الإسكندرية، مصر',
     'nav.about': 'من نحن',
     'nav.products': 'منتجاتنا',
     'nav.markets': 'أسواقنا',
@@ -273,6 +274,7 @@ export const translations: Record<Language, Record<string, string>> = {
   },
   en: {
     'nav.home': 'Home',
+    'topbar.location': 'Smouha, Alexandria, Egypt',
     'nav.about': 'About Us',
     'nav.products': 'Products',
     'nav.markets': 'Markets',
@@ -517,6 +519,7 @@ export const translations: Record<Language, Record<string, string>> = {
   },
   fr: {
     'nav.home': 'Accueil',
+    'topbar.location': 'Smouha, Alexandrie, Égypte',
     'nav.about': 'À Propos',
     'nav.products': 'Produits',
     'nav.markets': 'Marchés',
@@ -761,6 +764,7 @@ export const translations: Record<Language, Record<string, string>> = {
   },
   de: {
     'nav.home': 'Startseite',
+    'topbar.location': 'Smouha, Alexandria, Ägypten',
     'nav.about': 'Über uns',
     'nav.products': 'Produkte',
     'nav.markets': 'Märkte',
