@@ -1,6 +1,7 @@
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Globe2, MapPin } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
+import WorldMap from '@/components/WorldMap';
 
 const Markets = () => {
   const { t } = useLanguage();
@@ -19,6 +20,9 @@ const Markets = () => {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Interactive World Map */}
+      <WorldMap />
 
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/i18n/LanguageContext';
 import genexLogo from '@/assets/logo.png';
+import QualitySeal from './QualitySeal';
 
 interface ProductCardProps {
   name: string;
@@ -17,6 +18,10 @@ const ProductCard = ({ name, img }: ProductCardProps) => {
         {/* Logo watermark */}
         <div className="absolute bottom-3 end-3 bg-white/80 backdrop-blur-sm rounded-lg p-1.5 shadow-md">
           <img src={genexLogo} alt="GENEX" className="h-8 w-auto" />
+        </div>
+        {/* Quality seal */}
+        <div className="absolute top-3 start-3">
+          <QualitySeal />
         </div>
       </div>
       <div className="p-6">
