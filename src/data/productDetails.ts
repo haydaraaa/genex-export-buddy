@@ -25,6 +25,11 @@ import foulImg from '@/assets/products/foul.jpg';
 import lentilsImg from '@/assets/products/lentils.jpg';
 import chickpeasImg from '@/assets/products/chickpeas.jpg';
 import whiteBeansImg from '@/assets/products/whiteBeans.jpg';
+import greenPeasImg from '@/assets/products/greenPeas.jpg';
+import cannedVegetablesImg from '@/assets/products/cannedVegetables.jpg';
+import bakedBeansImg from '@/assets/products/bakedBeans.jpg';
+import cannedCornImg from '@/assets/products/cannedCorn.jpg';
+import tahiniImg from '@/assets/products/tahini.jpg';
 import medjoolImg from '@/assets/products/medjool.jpg';
 import ajwaImg from '@/assets/products/ajwa.jpg';
 import sukkariImg from '@/assets/products/sukkari.jpg';
@@ -339,6 +344,61 @@ export const productDetails: Record<string, ProductDetail> = {
     shelfLife: '36 months',
     storage: 'Room temperature, dry place',
     packaging: ['400g can', '800g can'],
+    origin: 'Cairo, Egypt',
+    season: 'Year-round',
+    grade: 'Premium Grade A',
+  },
+  greenPeas: {
+    id: 'greenPeas', img: greenPeasImg, category: 'canned',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Reg. 1169/2011 - Food Labeling',
+    shelfLife: '36 months',
+    storage: 'Room temperature, dry place',
+    packaging: ['400g can', '800g can', '2.5 kg can'],
+    origin: 'Cairo, Egypt',
+    season: 'Year-round',
+    grade: 'Premium Grade A',
+  },
+  cannedVegetables: {
+    id: 'cannedVegetables', img: cannedVegetablesImg, category: 'canned',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Reg. 1169/2011 - Food Labeling',
+    shelfLife: '36 months',
+    storage: 'Room temperature, dry place',
+    packaging: ['400g can', '800g can', '2.5 kg can'],
+    origin: 'Cairo, Egypt',
+    season: 'Year-round',
+    grade: 'Premium Grade A',
+  },
+  bakedBeans: {
+    id: 'bakedBeans', img: bakedBeansImg, category: 'canned',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Reg. 1169/2011 - Food Labeling',
+    shelfLife: '36 months',
+    storage: 'Room temperature, dry place',
+    packaging: ['400g can', '800g can'],
+    origin: 'Cairo, Egypt',
+    season: 'Year-round',
+    grade: 'Premium Grade A',
+  },
+  cannedCorn: {
+    id: 'cannedCorn', img: cannedCornImg, category: 'canned',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Reg. 1169/2011 - Food Labeling',
+    shelfLife: '36 months',
+    storage: 'Room temperature, dry place',
+    packaging: ['340g can', '400g can', '2.5 kg can'],
+    origin: 'Cairo, Egypt',
+    season: 'Year-round',
+    grade: 'Premium Grade A',
+  },
+  tahini: {
+    id: 'tahini', img: tahiniImg, category: 'canned',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Reg. 1169/2011 - Food Labeling',
+    shelfLife: '24 months',
+    storage: 'Room temperature, dry place',
+    packaging: ['250g glass jar', '500g glass jar', '1 kg glass jar'],
     origin: 'Cairo, Egypt',
     season: 'Year-round',
     grade: 'Premium Grade A',

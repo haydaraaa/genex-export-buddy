@@ -8,6 +8,11 @@ import foulImg from '@/assets/products/foul.jpg';
 import lentilsImg from '@/assets/products/lentils.jpg';
 import chickpeasImg from '@/assets/products/chickpeas.jpg';
 import whiteBeansImg from '@/assets/products/whiteBeans.jpg';
+import greenPeasImg from '@/assets/products/greenPeas.jpg';
+import cannedVegetablesImg from '@/assets/products/cannedVegetables.jpg';
+import bakedBeansImg from '@/assets/products/bakedBeans.jpg';
+import cannedCornImg from '@/assets/products/cannedCorn.jpg';
+import tahiniImg from '@/assets/products/tahini.jpg';
 
 const Canned = () => {
   const { t, isRtl } = useLanguage();
@@ -17,6 +22,11 @@ const Canned = () => {
     { name: 'lentils', img: lentilsImg },
     { name: 'chickpeas', img: chickpeasImg },
     { name: 'whiteBeans', img: whiteBeansImg },
+    { name: 'greenPeas', img: greenPeasImg },
+    { name: 'cannedVegetables', img: cannedVegetablesImg },
+    { name: 'bakedBeans', img: bakedBeansImg },
+    { name: 'cannedCorn', img: cannedCornImg },
+    { name: 'tahini', img: tahiniImg },
   ];
 
   return (
