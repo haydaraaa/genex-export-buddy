@@ -10,6 +10,11 @@ import grapeImg from '@/assets/products/grape.jpg';
 import pomegranateImg from '@/assets/products/pomegranate.jpg';
 import mangoImg from '@/assets/products/mango.jpg';
 import guavaImg from '@/assets/products/guava.jpg';
+import figImg from '@/assets/products/fig.jpg';
+import peachImg from '@/assets/products/peach.jpg';
+import watermelonImg from '@/assets/products/watermelon.jpg';
+import lemonImg from '@/assets/products/lemon.jpg';
+import cantaloupeImg from '@/assets/products/cantaloupe.jpg';
 
 const Fruits = () => {
   const { t, isRtl } = useLanguage();
@@ -21,6 +26,11 @@ const Fruits = () => {
     { name: 'pomegranate', img: pomegranateImg },
     { name: 'mango', img: mangoImg },
     { name: 'guava', img: guavaImg },
+    { name: 'fig', img: figImg },
+    { name: 'peach', img: peachImg },
+    { name: 'watermelon', img: watermelonImg },
+    { name: 'lemon', img: lemonImg },
+    { name: 'cantaloupe', img: cantaloupeImg },
   ];
 
   return (

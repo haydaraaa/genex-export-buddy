@@ -5,6 +5,11 @@ import grapeImg from '@/assets/products/grape.jpg';
 import pomegranateImg from '@/assets/products/pomegranate.jpg';
 import mangoImg from '@/assets/products/mango.jpg';
 import guavaImg from '@/assets/products/guava.jpg';
+import figImg from '@/assets/products/fig.jpg';
+import peachImg from '@/assets/products/peach.jpg';
+import watermelonImg from '@/assets/products/watermelon.jpg';
+import lemonImg from '@/assets/products/lemon.jpg';
+import cantaloupeImg from '@/assets/products/cantaloupe.jpg';
 import tomatoImg from '@/assets/products/tomato.jpg';
 import pepperImg from '@/assets/products/pepper.jpg';
 import onionImg from '@/assets/products/onion.jpg';
@@ -112,6 +117,61 @@ export const productDetails: Record<string, ProductDetail> = {
     packaging: ['3 kg carton', '5 kg carton'],
     origin: 'Qalyubia, Egypt',
     season: 'September - January',
+    grade: 'Premium Export Grade A',
+  },
+  fig: {
+    id: 'fig', img: figImg, category: 'fruits',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class Extra / Class I',
+    shelfLife: '5-7 days',
+    storage: '0-2°C, 85-90% RH',
+    packaging: ['2 kg tray', '3 kg carton'],
+    origin: 'Assiut, Egypt',
+    season: 'June - September',
+    grade: 'Premium Export Grade A',
+  },
+  peach: {
+    id: 'peach', img: peachImg, category: 'fruits',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '2-4 weeks',
+    storage: '0-1°C, 90-95% RH',
+    packaging: ['5 kg carton', '7 kg carton'],
+    origin: 'Qalyubia, Egypt',
+    season: 'May - August',
+    grade: 'Premium Export Grade A',
+  },
+  watermelon: {
+    id: 'watermelon', img: watermelonImg, category: 'fruits',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '2-3 weeks',
+    storage: '10-15°C, 85-90% RH',
+    packaging: ['Single fruit', 'Bulk bin'],
+    origin: 'Minya, Egypt',
+    season: 'April - August',
+    grade: 'Premium Export Grade A',
+  },
+  lemon: {
+    id: 'lemon', img: lemonImg, category: 'fruits',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '4-8 weeks',
+    storage: '10-13°C, 85-90% RH',
+    packaging: ['5 kg carton', '10 kg carton'],
+    origin: 'Beheira, Egypt',
+    season: 'Year-round',
+    grade: 'Premium Export Grade A',
+  },
+  cantaloupe: {
+    id: 'cantaloupe', img: cantaloupeImg, category: 'fruits',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '2-3 weeks',
+    storage: '2-5°C, 90-95% RH',
+    packaging: ['5 kg carton', '10 kg carton'],
+    origin: 'Ismailia, Egypt',
+    season: 'April - September',
     grade: 'Premium Export Grade A',
   },
   tomato: {
