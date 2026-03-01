@@ -37,6 +37,10 @@ import juiceGuavaImg from '@/assets/products/juice-guava.jpg';
 import juiceStrawberryImg from '@/assets/products/juice-strawberry.jpg';
 import juicePomegranateImg from '@/assets/products/juice-pomegranate.jpg';
 import juiceMixedImg from '@/assets/products/juice-mixed.jpg';
+import juiceAppleImg from '@/assets/products/juice-apple.jpg';
+import juicePeachImg from '@/assets/products/juice-peach.jpg';
+import juiceGrapeImg from '@/assets/products/juice-grape.jpg';
+import juiceLemonImg from '@/assets/products/juice-lemon.jpg';
 
 export interface ProductDetail {
   id: string;
@@ -467,6 +471,50 @@ export const productDetails: Record<string, ProductDetail> = {
     shelfLife: '12 months',
     storage: 'Room temperature, away from sunlight',
     packaging: ['200ml Tetra Pak', '1L Tetra Pak'],
+    origin: 'Cairo, Egypt',
+    season: 'Year-round',
+    grade: '100% Natural - No Preservatives',
+  },
+  juiceApple: {
+    id: 'juiceApple', img: juiceAppleImg, category: 'juices',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Directive 2012/12/EU - Fruit Juices',
+    shelfLife: '12 months',
+    storage: 'Room temperature, away from sunlight',
+    packaging: ['200ml Glass bottle', '750ml Glass bottle', '1L Glass bottle'],
+    origin: 'Cairo, Egypt',
+    season: 'Year-round',
+    grade: '100% Natural - No Preservatives',
+  },
+  juicePeach: {
+    id: 'juicePeach', img: juicePeachImg, category: 'juices',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Directive 2012/12/EU - Fruit Juices',
+    shelfLife: '12 months',
+    storage: 'Room temperature, away from sunlight',
+    packaging: ['200ml Glass bottle', '750ml Glass bottle', '1L Glass bottle'],
+    origin: 'Cairo, Egypt',
+    season: 'Year-round',
+    grade: '100% Natural Nectar - No Preservatives',
+  },
+  juiceGrape: {
+    id: 'juiceGrape', img: juiceGrapeImg, category: 'juices',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Directive 2012/12/EU - Fruit Juices',
+    shelfLife: '12 months',
+    storage: 'Room temperature, away from sunlight',
+    packaging: ['200ml Glass bottle', '750ml Glass bottle', '1L Glass bottle'],
+    origin: 'Cairo, Egypt',
+    season: 'Year-round',
+    grade: '100% Natural - No Preservatives',
+  },
+  juiceLemon: {
+    id: 'juiceLemon', img: juiceLemonImg, category: 'juices',
+    certificates: ['ISO 22000', 'HACCP', 'Halal', 'BRC'],
+    euStandard: 'EU Directive 2012/12/EU - Fruit Juices',
+    shelfLife: '12 months',
+    storage: 'Room temperature, away from sunlight',
+    packaging: ['200ml Glass bottle', '750ml Glass bottle', '1L Glass bottle'],
     origin: 'Cairo, Egypt',
     season: 'Year-round',
     grade: '100% Natural - No Preservatives',
