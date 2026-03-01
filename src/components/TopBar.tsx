@@ -19,7 +19,7 @@ const TopBar = () => {
         </div>
         <div className="flex items-center gap-1.5">
           <MapPin className="h-3 w-3" />
-          <span>{t('topbar.location') || 'Cairo, Egypt'}</span>
+          <span>{t('topbar.location') || 'Smouha, Alexandria, Egypt'}</span>
         </div>
       </div>
     </div>
