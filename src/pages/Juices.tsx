@@ -10,6 +10,10 @@ import juiceGuavaImg from '@/assets/products/juice-guava.jpg';
 import juiceStrawberryImg from '@/assets/products/juice-strawberry.jpg';
 import juicePomegranateImg from '@/assets/products/juice-pomegranate.jpg';
 import juiceMixedImg from '@/assets/products/juice-mixed.jpg';
+import juiceAppleImg from '@/assets/products/juice-apple.jpg';
+import juicePeachImg from '@/assets/products/juice-peach.jpg';
+import juiceGrapeImg from '@/assets/products/juice-grape.jpg';
+import juiceLemonImg from '@/assets/products/juice-lemon.jpg';
 
 const Juices = () => {
   const { t, isRtl } = useLanguage();
@@ -21,6 +25,10 @@ const Juices = () => {
     { name: 'juiceStrawberry', img: juiceStrawberryImg },
     { name: 'juicePomegranate', img: juicePomegranateImg },
     { name: 'juiceMixed', img: juiceMixedImg },
+    { name: 'juiceApple', img: juiceAppleImg },
+    { name: 'juicePeach', img: juicePeachImg },
+    { name: 'juiceGrape', img: juiceGrapeImg },
+    { name: 'juiceLemon', img: juiceLemonImg },
   ];
 
   return (
