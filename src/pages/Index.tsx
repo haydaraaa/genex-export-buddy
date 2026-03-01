@@ -3,6 +3,8 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { ArrowLeft, ArrowRight, MessageCircle, Globe, Calendar, ShoppingBag, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
+import WhyUsSection from '@/components/WhyUsSection';
+import PartnersStrip from '@/components/PartnersStrip';
 import heroBg from '@/assets/hero-bg.jpg';
 import genexLogo from '@/assets/logo.png';
 import categoryFruits from '@/assets/category-fruits.jpg';
@@ -91,8 +93,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Product Categories with real images */}
-      <section className="py-20 bg-card">
+      {/* Why Us */}
+      <WhyUsSection />
+
+      {/* Product Categories */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-4">{t('products.title')}</h2>
@@ -101,7 +106,7 @@ const Index = () => {
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((cat, i) => (
               <StaggerItem key={i}>
-                <Link to={cat.link} className="block rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all hover:-translate-y-1 group bg-background">
+                <Link to={cat.link} className="block rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all hover:-translate-y-1 group bg-card">
                   <div className="aspect-[16/10] overflow-hidden">
                     <img src={cat.img} alt={cat.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
                   </div>
@@ -137,8 +142,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Partners Strip */}
+      <PartnersStrip />
+
       {/* CTA */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-card">
         <ScrollReveal className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{t('cta.title')}</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">{t('cta.text')}</p>
