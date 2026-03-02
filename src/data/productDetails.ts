@@ -56,6 +56,9 @@ import frozenOkraImg from '@/assets/products/frozen-okra.jpg';
 import frozenMolokhiaImg from '@/assets/products/frozen-molokhia.jpg';
 import frozenMixedVegetablesImg from '@/assets/products/frozen-mixedvegetables.jpg';
 import frozenArtichokeImg from '@/assets/products/frozen-artichoke.jpg';
+import frozenPotatoImg from '@/assets/products/frozen-potato.jpg';
+import frozenSpinachImg from '@/assets/products/frozen-spinach.jpg';
+import frozenBroccoliImg from '@/assets/products/frozen-broccoli.jpg';
 
 export interface ProductDetail {
   id: string;
@@ -695,6 +698,39 @@ export const productDetails: Record<string, ProductDetail> = {
     shelfLife: '24 months',
     storage: '-18°C or below',
     packaging: ['400g bag', '1 kg bag', '2.5 kg bag'],
+    origin: 'Beheira, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium IQF Grade A',
+  },
+  frozenPotato: {
+    id: 'frozenPotato', img: frozenPotatoImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 1169/2011 - IQF Standard',
+    shelfLife: '24 months',
+    storage: '-18°C or below',
+    packaging: ['500g bag', '1 kg bag', '2.5 kg bag', '10 kg bulk bag'],
+    origin: 'Nubaria, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium IQF Grade A',
+  },
+  frozenSpinach: {
+    id: 'frozenSpinach', img: frozenSpinachImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 1169/2011 - IQF Standard',
+    shelfLife: '24 months',
+    storage: '-18°C or below',
+    packaging: ['400g bag', '500g bag', '1 kg bag', '10 kg bulk bag'],
+    origin: 'Nile Delta, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium IQF Grade A',
+  },
+  frozenBroccoli: {
+    id: 'frozenBroccoli', img: frozenBroccoliImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 1169/2011 - IQF Standard',
+    shelfLife: '24 months',
+    storage: '-18°C or below',
+    packaging: ['500g bag', '1 kg bag', '2.5 kg bag'],
     origin: 'Beheira, Egypt',
     season: 'Year-round (frozen)',
     grade: 'Premium IQF Grade A',
