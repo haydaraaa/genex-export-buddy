@@ -12,6 +12,7 @@ import categoryVegetables from '@/assets/category-vegetables.jpg';
 import categoryCanned from '@/assets/category-canned.jpg';
 import categoryDates from '@/assets/category-dates.jpg';
 import categoryJuices from '@/assets/category-juices.jpg';
+import categoryFrozen from '@/assets/category-frozen.jpg';
 
 const Index = () => {
   const { t, isRtl } = useLanguage();
@@ -23,6 +24,7 @@ const Index = () => {
     { title: t('products.canned'), desc: t('products.canned.desc'), img: categoryCanned, link: '/products/canned' },
     { title: t('products.dates'), desc: t('products.dates.desc'), img: categoryDates, link: '/products/dates' },
     { title: t('products.juices'), desc: t('products.juices.desc'), img: categoryJuices, link: '/products/juices' },
+    { title: t('products.frozen'), desc: t('products.frozen.desc'), img: categoryFrozen, link: '/products/frozen' },
   ];
 
   const stats = [

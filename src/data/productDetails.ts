@@ -46,11 +46,21 @@ import juiceAppleImg from '@/assets/products/juice-apple.jpg';
 import juicePeachImg from '@/assets/products/juice-peach.jpg';
 import juiceGrapeImg from '@/assets/products/juice-grape.jpg';
 import juiceLemonImg from '@/assets/products/juice-lemon.jpg';
+import frozenStrawberryImg from '@/assets/products/frozen-strawberry.jpg';
+import frozenMangoImg from '@/assets/products/frozen-mango.jpg';
+import frozenPomegranateImg from '@/assets/products/frozen-pomegranate.jpg';
+import frozenMixedBerriesImg from '@/assets/products/frozen-mixedberries.jpg';
+import frozenGreenBeansImg from '@/assets/products/frozen-greenbeans.jpg';
+import frozenPeasImg from '@/assets/products/frozen-peas.jpg';
+import frozenOkraImg from '@/assets/products/frozen-okra.jpg';
+import frozenMolokhiaImg from '@/assets/products/frozen-molokhia.jpg';
+import frozenMixedVegetablesImg from '@/assets/products/frozen-mixedvegetables.jpg';
+import frozenArtichokeImg from '@/assets/products/frozen-artichoke.jpg';
 
 export interface ProductDetail {
   id: string;
   img: string;
-  category: 'fruits' | 'vegetables' | 'canned' | 'dates' | 'juices';
+  category: 'fruits' | 'vegetables' | 'canned' | 'dates' | 'juices' | 'frozen';
   certificates: string[];
   euStandard: string;
   shelfLife: string;
@@ -578,5 +588,115 @@ export const productDetails: Record<string, ProductDetail> = {
     origin: 'Cairo, Egypt',
     season: 'Year-round',
     grade: '100% Natural - No Preservatives',
+  },
+  frozenStrawberry: {
+    id: 'frozenStrawberry', img: frozenStrawberryImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 1169/2011 - IQF Standard',
+    shelfLife: '24 months',
+    storage: '-18°C or below',
+    packaging: ['500g bag', '1 kg bag', '10 kg bulk bag'],
+    origin: 'Ismailia, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium IQF Grade A',
+  },
+  frozenMango: {
+    id: 'frozenMango', img: frozenMangoImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 1169/2011 - IQF Standard',
+    shelfLife: '24 months',
+    storage: '-18°C or below',
+    packaging: ['500g bag', '1 kg bag', '10 kg bulk bag'],
+    origin: 'Ismailia, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium IQF Grade A',
+  },
+  frozenPomegranate: {
+    id: 'frozenPomegranate', img: frozenPomegranateImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 1169/2011 - IQF Standard',
+    shelfLife: '24 months',
+    storage: '-18°C or below',
+    packaging: ['500g bag', '1 kg bag', '5 kg bulk bag'],
+    origin: 'Assiut, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium IQF Grade A',
+  },
+  frozenMixedBerries: {
+    id: 'frozenMixedBerries', img: frozenMixedBerriesImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 1169/2011 - IQF Standard',
+    shelfLife: '24 months',
+    storage: '-18°C or below',
+    packaging: ['500g bag', '1 kg bag', '10 kg bulk bag'],
+    origin: 'Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium IQF Grade A',
+  },
+  frozenGreenBeans: {
+    id: 'frozenGreenBeans', img: frozenGreenBeansImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 1169/2011 - IQF Standard',
+    shelfLife: '24 months',
+    storage: '-18°C or below',
+    packaging: ['500g bag', '1 kg bag', '10 kg bulk bag'],
+    origin: 'Qalyubia, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium IQF Grade A',
+  },
+  frozenPeas: {
+    id: 'frozenPeas', img: frozenPeasImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 1169/2011 - IQF Standard',
+    shelfLife: '24 months',
+    storage: '-18°C or below',
+    packaging: ['500g bag', '1 kg bag', '10 kg bulk bag'],
+    origin: 'Nile Delta, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium IQF Grade A',
+  },
+  frozenOkra: {
+    id: 'frozenOkra', img: frozenOkraImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 1169/2011 - IQF Standard',
+    shelfLife: '24 months',
+    storage: '-18°C or below',
+    packaging: ['500g bag', '1 kg bag', '10 kg bulk bag'],
+    origin: 'Upper Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium IQF Grade A',
+  },
+  frozenMolokhia: {
+    id: 'frozenMolokhia', img: frozenMolokhiaImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 1169/2011 - IQF Standard',
+    shelfLife: '24 months',
+    storage: '-18°C or below',
+    packaging: ['400g bag', '500g bag', '1 kg bag'],
+    origin: 'Nile Delta, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium IQF Grade A',
+  },
+  frozenMixedVegetables: {
+    id: 'frozenMixedVegetables', img: frozenMixedVegetablesImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 1169/2011 - IQF Standard',
+    shelfLife: '24 months',
+    storage: '-18°C or below',
+    packaging: ['500g bag', '1 kg bag', '2.5 kg bag'],
+    origin: 'Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium IQF Grade A',
+  },
+  frozenArtichoke: {
+    id: 'frozenArtichoke', img: frozenArtichokeImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 1169/2011 - IQF Standard',
+    shelfLife: '24 months',
+    storage: '-18°C or below',
+    packaging: ['400g bag', '1 kg bag', '2.5 kg bag'],
+    origin: 'Beheira, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium IQF Grade A',
   },
 };

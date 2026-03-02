@@ -13,6 +13,7 @@ import Vegetables from "./pages/Vegetables";
 import Canned from "./pages/Canned";
 import Dates from "./pages/Dates";
 import Juices from "./pages/Juices";
+import Frozen from "./pages/Frozen";
 import Markets from "./pages/Markets";
 import Certificates from "./pages/Certificates";
 import Gallery from "./pages/Gallery";
@@ -40,6 +41,7 @@ const App = () => (
               <Route path="/products/canned" element={<Canned />} />
               <Route path="/products/dates" element={<Dates />} />
               <Route path="/products/juices" element={<Juices />} />
+              <Route path="/products/frozen" element={<Frozen />} />
               <Route path="/markets" element={<Markets />} />
               <Route path="/certificates" element={<Certificates />} />
               <Route path="/gallery" element={<Gallery />} />
