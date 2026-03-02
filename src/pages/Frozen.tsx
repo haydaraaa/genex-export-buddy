@@ -14,6 +14,9 @@ import frozenOkraImg from '@/assets/products/frozen-okra.jpg';
 import frozenMolokhiaImg from '@/assets/products/frozen-molokhia.jpg';
 import frozenMixedvegetablesImg from '@/assets/products/frozen-mixedvegetables.jpg';
 import frozenArtichokeImg from '@/assets/products/frozen-artichoke.jpg';
+import frozenPotatoImg from '@/assets/products/frozen-potato.jpg';
+import frozenSpinachImg from '@/assets/products/frozen-spinach.jpg';
+import frozenBroccoliImg from '@/assets/products/frozen-broccoli.jpg';
 
 const Frozen = () => {
   const { t, isRtl } = useLanguage();
@@ -29,6 +32,9 @@ const Frozen = () => {
     { name: 'frozenMolokhia', img: frozenMolokhiaImg },
     { name: 'frozenMixedVegetables', img: frozenMixedvegetablesImg },
     { name: 'frozenArtichoke', img: frozenArtichokeImg },
+    { name: 'frozenPotato', img: frozenPotatoImg },
+    { name: 'frozenSpinach', img: frozenSpinachImg },
+    { name: 'frozenBroccoli', img: frozenBroccoliImg },
   ];
 
   return (
