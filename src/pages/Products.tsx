@@ -8,6 +8,7 @@ import categoryCanned from '@/assets/category-canned.jpg';
 import categoryDates from '@/assets/category-dates.jpg';
 import categoryJuices from '@/assets/category-juices.jpg';
 import categoryFrozen from '@/assets/category-frozen.jpg';
+import categorySeafood from '@/assets/category-seafood.jpg';
 
 const Products = () => {
   const { t, isRtl } = useLanguage();
@@ -20,6 +21,7 @@ const Products = () => {
     { key: 'dates', title: t('products.dates.title'), desc: t('products.dates.desc'), img: categoryDates, link: '/products/dates' },
     { key: 'juices', title: t('products.juices.title'), desc: t('products.juices.desc'), img: categoryJuices, link: '/products/juices' },
     { key: 'frozen', title: t('products.frozen.title'), desc: t('products.frozen.desc'), img: categoryFrozen, link: '/products/frozen' },
+    { key: 'seafood', title: t('products.seafood.title'), desc: t('products.seafood.desc'), img: categorySeafood, link: '/products/seafood' },
   ];
 
   return (

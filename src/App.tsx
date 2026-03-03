@@ -14,6 +14,7 @@ import Canned from "./pages/Canned";
 import Dates from "./pages/Dates";
 import Juices from "./pages/Juices";
 import Frozen from "./pages/Frozen";
+import Seafood from "./pages/Seafood";
 import Markets from "./pages/Markets";
 import Certificates from "./pages/Certificates";
 import Gallery from "./pages/Gallery";
@@ -42,6 +43,7 @@ const App = () => (
               <Route path="/products/dates" element={<Dates />} />
               <Route path="/products/juices" element={<Juices />} />
               <Route path="/products/frozen" element={<Frozen />} />
+              <Route path="/products/seafood" element={<Seafood />} />
               <Route path="/markets" element={<Markets />} />
               <Route path="/certificates" element={<Certificates />} />
               <Route path="/gallery" element={<Gallery />} />

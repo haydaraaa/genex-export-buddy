@@ -65,11 +65,17 @@ import frozenCroissantImg from '@/assets/products/frozen-croissant.jpg';
 import frozenSpringRollsImg from '@/assets/products/frozen-springrolls.jpg';
 import frozenKonafaImg from '@/assets/products/frozen-konafa.jpg';
 import frozenPuffPastryImg from '@/assets/products/frozen-puffpastry.jpg';
+import frozenShrimpImg from '@/assets/products/frozen-shrimp.jpg';
+import frozenCalamariImg from '@/assets/products/frozen-calamari.jpg';
+import frozenFishFilletImg from '@/assets/products/frozen-fishfillet.jpg';
+import frozenTilapiaImg from '@/assets/products/frozen-tilapia.jpg';
+import frozenSeafoodMixImg from '@/assets/products/frozen-seafoodmix.jpg';
+import frozenCrabSticksImg from '@/assets/products/frozen-crabsticks.jpg';
 
 export interface ProductDetail {
   id: string;
   img: string;
-  category: 'fruits' | 'vegetables' | 'canned' | 'dates' | 'juices' | 'frozen';
+  category: 'fruits' | 'vegetables' | 'canned' | 'dates' | 'juices' | 'frozen' | 'seafood';
   certificates: string[];
   euStandard: string;
   shelfLife: string;
@@ -806,5 +812,71 @@ export const productDetails: Record<string, ProductDetail> = {
     origin: '10th of Ramadan City, Egypt',
     season: 'Year-round (frozen)',
     grade: 'Premium Puff Pastry Sheets',
+  },
+  frozenShrimp: {
+    id: 'frozenShrimp', img: frozenShrimpImg, category: 'seafood',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS', 'MSC'],
+    euStandard: 'EU Reg. 853/2004 - Frozen Seafood Standard',
+    shelfLife: '24 months',
+    storage: '-18°C or below',
+    packaging: ['500g bag', '1 kg bag', '5 kg bulk box'],
+    origin: 'Damietta, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium IQF Grade A - Deveined',
+  },
+  frozenCalamari: {
+    id: 'frozenCalamari', img: frozenCalamariImg, category: 'seafood',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 853/2004 - Frozen Seafood Standard',
+    shelfLife: '24 months',
+    storage: '-18°C or below',
+    packaging: ['500g bag', '1 kg bag', '5 kg bulk box'],
+    origin: 'Suez, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium IQF Calamari Rings',
+  },
+  frozenFishFillet: {
+    id: 'frozenFishFillet', img: frozenFishFilletImg, category: 'seafood',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 853/2004 - Frozen Seafood Standard',
+    shelfLife: '24 months',
+    storage: '-18°C or below',
+    packaging: ['500g vacuum pack', '1 kg vacuum pack', '5 kg bulk'],
+    origin: 'Port Said, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium Boneless Fillet',
+  },
+  frozenTilapia: {
+    id: 'frozenTilapia', img: frozenTilapiaImg, category: 'seafood',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS', 'ASC'],
+    euStandard: 'EU Reg. 853/2004 - Frozen Seafood Standard',
+    shelfLife: '24 months',
+    storage: '-18°C or below',
+    packaging: ['1 kg bag', '2.5 kg bag', '10 kg bulk box'],
+    origin: 'Kafr El Sheikh, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium Whole Cleaned',
+  },
+  frozenSeafoodMix: {
+    id: 'frozenSeafoodMix', img: frozenSeafoodMixImg, category: 'seafood',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 853/2004 - Frozen Seafood Standard',
+    shelfLife: '18 months',
+    storage: '-18°C or below',
+    packaging: ['500g bag', '1 kg bag', '3 kg bulk box'],
+    origin: 'Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium IQF Seafood Mix',
+  },
+  frozenCrabSticks: {
+    id: 'frozenCrabSticks', img: frozenCrabSticksImg, category: 'seafood',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 853/2004 - Frozen Seafood Standard',
+    shelfLife: '18 months',
+    storage: '-18°C or below',
+    packaging: ['250g pack', '500g pack', '1 kg pack'],
+    origin: 'Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium Surimi Crab Sticks',
   },
 };
