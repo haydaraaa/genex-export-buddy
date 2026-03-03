@@ -110,18 +110,33 @@ const Index = () => {
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {categories.slice(0, 4).map((cat, i) => (
               <StaggerItem key={i}>
-                <Link to={cat.link} className="block rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all hover:-translate-y-1 group bg-card h-full">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img src={cat.img} alt={cat.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-foreground mb-1.5">{cat.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-3 line-clamp-2">{cat.desc}</p>
-                    <span className="inline-flex items-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all">
-                      {isRtl ? 'عرض الكل' : 'View All'}
-                      <Arrow className="h-4 w-4" />
-                    </span>
-                  </div>
+                <Link to={cat.link} className="block h-full">
+                  <motion.div
+                    whileHover={{ y: -8, boxShadow: '0 20px 40px -12px hsl(var(--primary) / 0.25)' }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                    className="rounded-2xl overflow-hidden border border-border group bg-card h-full"
+                  >
+                    <div className="aspect-[4/3] overflow-hidden relative">
+                      <motion.img
+                        src={cat.img} alt={cat.title}
+                        className="w-full h-full object-cover"
+                        whileHover={{ scale: 1.12 }}
+                        transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
+                    </div>
+                    <div className="p-5">
+                      <h3 className="text-xl font-bold text-foreground mb-1.5 group-hover:text-primary transition-colors duration-300">{cat.title}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed mb-3 line-clamp-2">{cat.desc}</p>
+                      <span className="inline-flex items-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all duration-300">
+                        {isRtl ? 'عرض الكل' : 'View All'}
+                        <motion.span whileHover={{ x: isRtl ? -4 : 4 }}>
+                          <Arrow className="h-4 w-4" />
+                        </motion.span>
+                      </span>
+                    </div>
+                  </motion.div>
                 </Link>
               </StaggerItem>
             ))}
@@ -129,18 +144,33 @@ const Index = () => {
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mt-6">
             {categories.slice(4).map((cat, i) => (
               <StaggerItem key={i + 4}>
-                <Link to={cat.link} className="block rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all hover:-translate-y-1 group bg-card h-full">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img src={cat.img} alt={cat.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-foreground mb-1.5">{cat.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-3 line-clamp-2">{cat.desc}</p>
-                    <span className="inline-flex items-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all">
-                      {isRtl ? 'عرض الكل' : 'View All'}
-                      <Arrow className="h-4 w-4" />
-                    </span>
-                  </div>
+                <Link to={cat.link} className="block h-full">
+                  <motion.div
+                    whileHover={{ y: -8, boxShadow: '0 20px 40px -12px hsl(var(--primary) / 0.25)' }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                    className="rounded-2xl overflow-hidden border border-border group bg-card h-full"
+                  >
+                    <div className="aspect-[4/3] overflow-hidden relative">
+                      <motion.img
+                        src={cat.img} alt={cat.title}
+                        className="w-full h-full object-cover"
+                        whileHover={{ scale: 1.12 }}
+                        transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
+                    </div>
+                    <div className="p-5">
+                      <h3 className="text-xl font-bold text-foreground mb-1.5 group-hover:text-primary transition-colors duration-300">{cat.title}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed mb-3 line-clamp-2">{cat.desc}</p>
+                      <span className="inline-flex items-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all duration-300">
+                        {isRtl ? 'عرض الكل' : 'View All'}
+                        <motion.span whileHover={{ x: isRtl ? -4 : 4 }}>
+                          <Arrow className="h-4 w-4" />
+                        </motion.span>
+                      </span>
+                    </div>
+                  </motion.div>
                 </Link>
               </StaggerItem>
             ))}
