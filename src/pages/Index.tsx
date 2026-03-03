@@ -107,17 +107,36 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-4">{t('products.title')}</h2>
             <div className="w-20 h-1 bg-accent mx-auto mb-12 rounded-full" />
           </ScrollReveal>
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {categories.map((cat, i) => (
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {categories.slice(0, 4).map((cat, i) => (
               <StaggerItem key={i}>
-                <Link to={cat.link} className="block rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all hover:-translate-y-1 group bg-card">
-                  <div className="aspect-[16/10] overflow-hidden">
+                <Link to={cat.link} className="block rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all hover:-translate-y-1 group bg-card h-full">
+                  <div className="aspect-[4/3] overflow-hidden">
                     <img src={cat.img} alt={cat.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold text-foreground mb-2">{cat.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed mb-3">{cat.desc}</p>
-                    <span className="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-foreground mb-1.5">{cat.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-3 line-clamp-2">{cat.desc}</p>
+                    <span className="inline-flex items-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all">
+                      {isRtl ? 'عرض الكل' : 'View All'}
+                      <Arrow className="h-4 w-4" />
+                    </span>
+                  </div>
+                </Link>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mt-6">
+            {categories.slice(4).map((cat, i) => (
+              <StaggerItem key={i + 4}>
+                <Link to={cat.link} className="block rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all hover:-translate-y-1 group bg-card h-full">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img src={cat.img} alt={cat.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-foreground mb-1.5">{cat.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-3 line-clamp-2">{cat.desc}</p>
+                    <span className="inline-flex items-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all">
                       {isRtl ? 'عرض الكل' : 'View All'}
                       <Arrow className="h-4 w-4" />
                     </span>
