@@ -38,17 +38,36 @@ const Products = () => {
 
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {categories.map(cat => (
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {categories.slice(0, 4).map(cat => (
               <StaggerItem key={cat.key}>
-                <Link to={cat.link} className="block bg-card rounded-2xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
-                  <div className="aspect-[16/10] overflow-hidden">
+                <Link to={cat.link} className="block bg-card rounded-2xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group h-full">
+                  <div className="aspect-[4/3] overflow-hidden">
                     <img src={cat.img} alt={cat.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
                   </div>
-                  <div className="p-6">
-                    <h2 className="text-2xl font-bold text-foreground mb-2">{cat.title}</h2>
-                    <p className="text-muted-foreground mb-4 leading-relaxed">{cat.desc}</p>
-                    <span className="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
+                  <div className="p-5">
+                    <h2 className="text-xl font-bold text-foreground mb-1.5">{cat.title}</h2>
+                    <p className="text-muted-foreground text-sm mb-3 leading-relaxed line-clamp-2">{cat.desc}</p>
+                    <span className="inline-flex items-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all">
+                      {t('products.viewAll') || (isRtl ? 'عرض الكل' : 'View All')}
+                      <Arrow className="h-4 w-4" />
+                    </span>
+                  </div>
+                </Link>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mt-6">
+            {categories.slice(4).map(cat => (
+              <StaggerItem key={cat.key}>
+                <Link to={cat.link} className="block bg-card rounded-2xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group h-full">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img src={cat.img} alt={cat.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                  </div>
+                  <div className="p-5">
+                    <h2 className="text-xl font-bold text-foreground mb-1.5">{cat.title}</h2>
+                    <p className="text-muted-foreground text-sm mb-3 leading-relaxed line-clamp-2">{cat.desc}</p>
+                    <span className="inline-flex items-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all">
                       {t('products.viewAll') || (isRtl ? 'عرض الكل' : 'View All')}
                       <Arrow className="h-4 w-4" />
                     </span>
