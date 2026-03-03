@@ -1,7 +1,8 @@
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Globe2, MapPin } from 'lucide-react';
+import { Globe2, MapPin, Fish, CakeSlice, Apple, Snowflake } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 import WorldMap from '@/components/WorldMap';
+import { motion } from 'framer-motion';
 
 const Markets = () => {
   const { t } = useLanguage();
@@ -21,12 +22,12 @@ const Markets = () => {
         </div>
       </section>
 
-      {/* Interactive World Map */}
       <WorldMap />
 
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            {/* Arab Markets Card */}
             <ScrollReveal direction="right">
               <div className="bg-card rounded-2xl border border-border p-8 hover:shadow-xl transition-all h-full">
                 <div className="flex items-center gap-3 mb-4">
@@ -36,14 +37,39 @@ const Markets = () => {
                   <h2 className="text-2xl font-bold text-foreground">{t('markets.arab.title')}</h2>
                 </div>
                 <p className="text-muted-foreground mb-6 leading-relaxed">{t('markets.arab.desc')}</p>
+                
+                {/* Arab key products */}
+                <motion.div 
+                  className="bg-primary/5 rounded-xl p-4 mb-6 border border-primary/10"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <Apple className="h-5 w-5 text-primary" />
+                    <span className="font-semibold text-foreground text-sm">{t('markets.arab.products')}</span>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{t('markets.arab.products.desc')}</p>
+                </motion.div>
+
                 <div className="flex flex-wrap gap-3">
                   {arabCountries.map((flag, i) => (
-                    <span key={i} className="text-4xl">{flag}</span>
+                    <motion.span 
+                      key={i} 
+                      className="text-4xl"
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.05 }}
+                    >
+                      {flag}
+                    </motion.span>
                   ))}
                 </div>
               </div>
             </ScrollReveal>
 
+            {/* European Markets Card */}
             <ScrollReveal direction="left" delay={0.15}>
               <div className="bg-card rounded-2xl border border-border p-8 hover:shadow-xl transition-all h-full">
                 <div className="flex items-center gap-3 mb-4">
@@ -53,9 +79,49 @@ const Markets = () => {
                   <h2 className="text-2xl font-bold text-foreground">{t('markets.europe.title')}</h2>
                 </div>
                 <p className="text-muted-foreground mb-6 leading-relaxed">{t('markets.europe.desc')}</p>
+                
+                {/* Frozen Seafood sub-section */}
+                <motion.div 
+                  className="bg-accent/5 rounded-xl p-4 mb-4 border border-accent/10"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <Fish className="h-5 w-5 text-accent" />
+                    <span className="font-semibold text-foreground text-sm">{t('markets.europe.seafood')}</span>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{t('markets.europe.seafood.desc')}</p>
+                </motion.div>
+
+                {/* Frozen Bakery sub-section */}
+                <motion.div 
+                  className="bg-primary/5 rounded-xl p-4 mb-6 border border-primary/10"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <Snowflake className="h-5 w-5 text-primary" />
+                    <span className="font-semibold text-foreground text-sm">{t('markets.europe.frozen')}</span>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{t('markets.europe.frozen.desc')}</p>
+                </motion.div>
+
                 <div className="flex flex-wrap gap-3">
                   {euroCountries.map((flag, i) => (
-                    <span key={i} className="text-4xl">{flag}</span>
+                    <motion.span 
+                      key={i} 
+                      className="text-4xl"
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.05 }}
+                    >
+                      {flag}
+                    </motion.span>
                   ))}
                 </div>
               </div>
