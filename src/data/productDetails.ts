@@ -59,6 +59,12 @@ import frozenArtichokeImg from '@/assets/products/frozen-artichoke.jpg';
 import frozenPotatoImg from '@/assets/products/frozen-potato.jpg';
 import frozenSpinachImg from '@/assets/products/frozen-spinach.jpg';
 import frozenBroccoliImg from '@/assets/products/frozen-broccoli.jpg';
+import frozenSambousaImg from '@/assets/products/frozen-sambousa.jpg';
+import frozenBorekImg from '@/assets/products/frozen-borek.jpg';
+import frozenCroissantImg from '@/assets/products/frozen-croissant.jpg';
+import frozenSpringRollsImg from '@/assets/products/frozen-springrolls.jpg';
+import frozenKonafaImg from '@/assets/products/frozen-konafa.jpg';
+import frozenPuffPastryImg from '@/assets/products/frozen-puffpastry.jpg';
 
 export interface ProductDetail {
   id: string;
@@ -734,5 +740,71 @@ export const productDetails: Record<string, ProductDetail> = {
     origin: 'Beheira, Egypt',
     season: 'Year-round (frozen)',
     grade: 'Premium IQF Grade A',
+  },
+  frozenSambousa: {
+    id: 'frozenSambousa', img: frozenSambousaImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS', 'Halal'],
+    euStandard: 'EU Reg. 1169/2011 - Frozen Bakery Standard',
+    shelfLife: '18 months',
+    storage: '-18°C or below',
+    packaging: ['500g box (20 pcs)', '1 kg box (40 pcs)', '2.5 kg bulk'],
+    origin: '10th of Ramadan City, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium Grade A',
+  },
+  frozenBorek: {
+    id: 'frozenBorek', img: frozenBorekImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS', 'Halal'],
+    euStandard: 'EU Reg. 1169/2011 - Frozen Bakery Standard',
+    shelfLife: '18 months',
+    storage: '-18°C or below',
+    packaging: ['400g box (8 pcs)', '800g box (16 pcs)', '2 kg bulk'],
+    origin: '10th of Ramadan City, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium Grade A',
+  },
+  frozenCroissant: {
+    id: 'frozenCroissant', img: frozenCroissantImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 1169/2011 - Frozen Bakery Standard',
+    shelfLife: '12 months',
+    storage: '-18°C or below',
+    packaging: ['300g box (6 pcs)', '600g box (12 pcs)', '3 kg bulk'],
+    origin: '10th of Ramadan City, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium Butter Croissant',
+  },
+  frozenSpringRolls: {
+    id: 'frozenSpringRolls', img: frozenSpringRollsImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS', 'Halal'],
+    euStandard: 'EU Reg. 1169/2011 - Frozen Bakery Standard',
+    shelfLife: '18 months',
+    storage: '-18°C or below',
+    packaging: ['500g box (10 pcs)', '1 kg box (20 pcs)', '2.5 kg bulk'],
+    origin: '10th of Ramadan City, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium Grade A',
+  },
+  frozenKonafa: {
+    id: 'frozenKonafa', img: frozenKonafaImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS', 'Halal'],
+    euStandard: 'EU Reg. 1169/2011 - Frozen Bakery Standard',
+    shelfLife: '18 months',
+    storage: '-18°C or below',
+    packaging: ['500g pack', '1 kg pack', '5 kg bulk'],
+    origin: '10th of Ramadan City, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium Shredded Phyllo',
+  },
+  frozenPuffPastry: {
+    id: 'frozenPuffPastry', img: frozenPuffPastryImg, category: 'frozen',
+    certificates: ['ISO 22000', 'HACCP', 'BRC', 'IFS'],
+    euStandard: 'EU Reg. 1169/2011 - Frozen Bakery Standard',
+    shelfLife: '18 months',
+    storage: '-18°C or below',
+    packaging: ['400g pack (6 sheets)', '800g pack (12 sheets)', '5 kg bulk'],
+    origin: '10th of Ramadan City, Egypt',
+    season: 'Year-round (frozen)',
+    grade: 'Premium Puff Pastry Sheets',
   },
 };

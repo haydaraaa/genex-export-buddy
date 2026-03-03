@@ -17,11 +17,17 @@ import frozenArtichokeImg from '@/assets/products/frozen-artichoke.jpg';
 import frozenPotatoImg from '@/assets/products/frozen-potato.jpg';
 import frozenSpinachImg from '@/assets/products/frozen-spinach.jpg';
 import frozenBroccoliImg from '@/assets/products/frozen-broccoli.jpg';
+import frozenSambousaImg from '@/assets/products/frozen-sambousa.jpg';
+import frozenBorekImg from '@/assets/products/frozen-borek.jpg';
+import frozenCroissantImg from '@/assets/products/frozen-croissant.jpg';
+import frozenSpringrollsImg from '@/assets/products/frozen-springrolls.jpg';
+import frozenKonafaImg from '@/assets/products/frozen-konafa.jpg';
+import frozenPuffpastryImg from '@/assets/products/frozen-puffpastry.jpg';
 
 const Frozen = () => {
   const { t, isRtl } = useLanguage();
 
-  const products = [
+  const fruitsAndVegetables = [
     { name: 'frozenStrawberry', img: frozenStrawberryImg },
     { name: 'frozenMango', img: frozenMangoImg },
     { name: 'frozenPomegranate', img: frozenPomegranateImg },
@@ -35,6 +41,15 @@ const Frozen = () => {
     { name: 'frozenPotato', img: frozenPotatoImg },
     { name: 'frozenSpinach', img: frozenSpinachImg },
     { name: 'frozenBroccoli', img: frozenBroccoliImg },
+  ];
+
+  const bakeryProducts = [
+    { name: 'frozenSambousa', img: frozenSambousaImg },
+    { name: 'frozenBorek', img: frozenBorekImg },
+    { name: 'frozenCroissant', img: frozenCroissantImg },
+    { name: 'frozenSpringRolls', img: frozenSpringrollsImg },
+    { name: 'frozenKonafa', img: frozenKonafaImg },
+    { name: 'frozenPuffPastry', img: frozenPuffpastryImg },
   ];
 
   return (
@@ -65,8 +80,28 @@ const Frozen = () => {
 
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
+          <ScrollReveal>
+            <h2 className="text-3xl font-bold text-foreground mb-2 text-center">{t('products.frozen.fruitsVeg')}</h2>
+            <p className="text-muted-foreground text-center mb-10">{t('products.frozen.fruitsVeg.desc')}</p>
+          </ScrollReveal>
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {products.map(p => (
+            {fruitsAndVegetables.map(p => (
+              <StaggerItem key={p.name}>
+                <ProductCard name={p.name} img={p.img} />
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <ScrollReveal>
+            <h2 className="text-3xl font-bold text-foreground mb-2 text-center">{t('products.frozen.bakery')}</h2>
+            <p className="text-muted-foreground text-center mb-10">{t('products.frozen.bakery.desc')}</p>
+          </ScrollReveal>
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {bakeryProducts.map(p => (
               <StaggerItem key={p.name}>
                 <ProductCard name={p.name} img={p.img} />
               </StaggerItem>
