@@ -21,6 +21,7 @@ import Gallery from "./pages/Gallery";
 import Partners from "./pages/Partners";
 import Contact from "./pages/Contact";
 import ProductDetail from "./pages/ProductDetail";
+import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
