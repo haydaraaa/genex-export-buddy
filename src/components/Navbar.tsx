@@ -25,7 +25,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-9 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md shadow-lg">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="relative flex items-center justify-between h-20">
+          {/* Logo - Absolutely Centered */}
+          <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center z-10">
+            <img src={genexLogo} alt="GENEX" className="h-48 w-auto" />
+          </Link>
+
           {/* Desktop Nav - Left */}
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.slice(0, 4).map(link => (
@@ -42,11 +47,6 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-
-          {/* Logo - Center */}
-          <Link to="/" className="flex items-center">
-            <img src={genexLogo} alt="GENEX" className="h-36 w-auto" />
-          </Link>
 
           {/* Desktop Nav - Right */}
           <div className="hidden lg:flex items-center gap-1">
