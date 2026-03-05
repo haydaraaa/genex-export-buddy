@@ -242,6 +242,10 @@ export const translations: Record<Language, Record<string, string>> = {
     'markets.europe.frozen.desc': 'سمبوسة، بورك، كرواسون، كنافة، سبرنج رول، وعجينة باف بيستري بتقنية IQF',
     'markets.arab.products': 'المنتجات الرئيسية',
     'markets.arab.products.desc': 'فواكه وخضروات طازجة، تمور فاخرة، وعصائر طبيعية 100%',
+    'markets.stats.volume': 'طن سنوياً',
+    'markets.stats.shipments': 'شحنة شهرياً',
+    'markets.stats.clients': 'عميل نشط',
+    'markets.stats.countries': 'دولة',
     // Certificates
     'certificates.title': 'الشهادات والتراخيص',
     'certificates.subtitle': 'نفخر بحصولنا على أعلى شهادات الجودة العالمية',
