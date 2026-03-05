@@ -14,6 +14,7 @@ const navLinks = [
   { key: 'nav.gallery', path: '/gallery' },
   { key: 'nav.partners', path: '/partners' },
   { key: 'nav.contact', path: '/contact' },
+  { key: 'nav.faq', path: '/faq' },
 ];
 
 const Navbar = () => {
