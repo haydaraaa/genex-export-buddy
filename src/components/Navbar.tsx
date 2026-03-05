@@ -14,7 +14,6 @@ const navLinks = [
   { key: 'nav.gallery', path: '/gallery' },
   { key: 'nav.partners', path: '/partners' },
   { key: 'nav.contact', path: '/contact' },
-  { key: 'nav.rfq', path: '/request-quote' },
 ];
 
 const Navbar = () => {
@@ -34,7 +33,7 @@ const Navbar = () => {
 
           {/* Desktop Nav - Left */}
           <div className="hidden lg:flex items-center gap-1">
-            {navLinks.slice(0, 5).map(link => (
+            {navLinks.slice(0, 4).map(link => (
               <Link
                 key={link.path}
                 to={link.path}
@@ -51,7 +50,7 @@ const Navbar = () => {
 
           {/* Desktop Nav - Right */}
           <div className="hidden lg:flex items-center gap-1">
-            {navLinks.slice(5).map(link => (
+            {navLinks.slice(4).map(link => (
               <Link
                 key={link.path}
                 to={link.path}
