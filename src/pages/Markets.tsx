@@ -1,8 +1,9 @@
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Globe2, MapPin, Fish, Apple, Snowflake } from 'lucide-react';
+import { Globe2, MapPin, Fish, Apple, Snowflake, TrendingUp, Ship, Users, Flag } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 import WorldMap from '@/components/WorldMap';
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useTransform, animate, useInView } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 import orangeImg from '@/assets/products/orange.jpg';
 import guavaImg from '@/assets/products/guava.jpg';
@@ -14,6 +15,40 @@ import fishFilletImg from '@/assets/products/frozen-fishfillet.jpg';
 import croissantImg from '@/assets/products/frozen-croissant.jpg';
 import konafaImg from '@/assets/products/frozen-konafa.jpg';
 import samboussaImg from '@/assets/products/frozen-sambousa.jpg';
+
+const AnimatedCounter = ({ value, suffix, label, icon: Icon, delay = 0 }: { value: number; suffix?: string; label: string; icon: React.ElementType; delay?: number }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (v) => Math.round(v).toLocaleString());
+
+  useEffect(() => {
+    if (isInView) {
+      const timer = setTimeout(() => {
+        animate(count, value, { duration: 2, ease: [0.25, 0.46, 0.45, 0.94] });
+      }, delay * 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [isInView, value, count, delay]);
+
+  return (
+    <motion.div
+      ref={ref}
+      className="flex flex-col items-center gap-1 p-3 rounded-xl bg-background/50 border border-border/50"
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay, type: 'spring', stiffness: 200 }}
+    >
+      <Icon className="h-5 w-5 text-primary mb-1" />
+      <div className="flex items-baseline gap-1">
+        <motion.span className="text-xl font-bold text-foreground">{rounded}</motion.span>
+        {suffix && <span className="text-xs text-muted-foreground font-medium">+</span>}
+      </div>
+      <span className="text-[11px] text-muted-foreground text-center leading-tight">{label}</span>
+    </motion.div>
+  );
+};
 
 const ProductThumbnails = ({ images, delay = 0 }: { images: { src: string; alt: string }[]; delay?: number }) => (
   <motion.div
@@ -61,6 +96,20 @@ const Markets = () => {
     { src: samboussaImg, alt: 'Samboussa' },
   ];
 
+  const arabStats = [
+    { value: 5000, icon: TrendingUp, label: t('markets.stats.volume') },
+    { value: 120, icon: Ship, label: t('markets.stats.shipments') },
+    { value: 85, icon: Users, label: t('markets.stats.clients') },
+    { value: 9, icon: Flag, label: t('markets.stats.countries') },
+  ];
+
+  const euroStats = [
+    { value: 3500, icon: TrendingUp, label: t('markets.stats.volume') },
+    { value: 80, icon: Ship, label: t('markets.stats.shipments') },
+    { value: 60, icon: Users, label: t('markets.stats.clients') },
+    { value: 6, icon: Flag, label: t('markets.stats.countries') },
+  ];
+
   return (
     <div>
       <section className="py-20 bg-primary">
@@ -88,6 +137,13 @@ const Markets = () => {
                   <h2 className="text-2xl font-bold text-foreground">{t('markets.arab.title')}</h2>
                 </div>
                 <p className="text-muted-foreground mb-6 leading-relaxed">{t('markets.arab.desc')}</p>
+
+                {/* Animated Stats */}
+                <div className="grid grid-cols-4 gap-2 mb-6">
+                  {arabStats.map((stat, i) => (
+                    <AnimatedCounter key={i} value={stat.value} icon={stat.icon} label={stat.label} delay={i * 0.15} />
+                  ))}
+                </div>
                 
                 <motion.div 
                   className="bg-primary/5 rounded-xl p-4 mb-6 border border-primary/10"
@@ -130,6 +186,13 @@ const Markets = () => {
                   <h2 className="text-2xl font-bold text-foreground">{t('markets.europe.title')}</h2>
                 </div>
                 <p className="text-muted-foreground mb-6 leading-relaxed">{t('markets.europe.desc')}</p>
+
+                {/* Animated Stats */}
+                <div className="grid grid-cols-4 gap-2 mb-6">
+                  {euroStats.map((stat, i) => (
+                    <AnimatedCounter key={i} value={stat.value} icon={stat.icon} label={stat.label} delay={i * 0.15 + 0.2} />
+                  ))}
+                </div>
                 
                 <motion.div 
                   className="bg-accent/5 rounded-xl p-4 mb-4 border border-accent/10"
