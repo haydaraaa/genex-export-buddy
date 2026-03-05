@@ -1,14 +1,65 @@
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Globe2, MapPin, Fish, CakeSlice, Apple, Snowflake } from 'lucide-react';
+import { Globe2, MapPin, Fish, Apple, Snowflake } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 import WorldMap from '@/components/WorldMap';
 import { motion } from 'framer-motion';
+
+import orangeImg from '@/assets/products/orange.jpg';
+import guavaImg from '@/assets/products/guava.jpg';
+import mangoImg from '@/assets/products/mango.jpg';
+import ajwaImg from '@/assets/products/ajwa.jpg';
+import shrimpImg from '@/assets/products/frozen-shrimp.jpg';
+import calamariImg from '@/assets/products/frozen-calamari.jpg';
+import fishFilletImg from '@/assets/products/frozen-fishfillet.jpg';
+import croissantImg from '@/assets/products/frozen-croissant.jpg';
+import konafaImg from '@/assets/products/frozen-konafa.jpg';
+import samboussaImg from '@/assets/products/frozen-sambousa.jpg';
+
+const ProductThumbnails = ({ images, delay = 0 }: { images: { src: string; alt: string }[]; delay?: number }) => (
+  <motion.div
+    className="flex gap-2 mt-3"
+    initial={{ opacity: 0, y: 8 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay }}
+  >
+    {images.map((img, i) => (
+      <motion.div
+        key={i}
+        className="w-14 h-14 rounded-lg overflow-hidden border-2 border-border shadow-sm"
+        whileHover={{ scale: 1.15, zIndex: 10 }}
+        transition={{ type: 'spring', stiffness: 300 }}
+      >
+        <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
+      </motion.div>
+    ))}
+  </motion.div>
+);
 
 const Markets = () => {
   const { t } = useLanguage();
 
   const arabCountries = ['🇸🇦', '🇦🇪', '🇰🇼', '🇶🇦', '🇴🇲', '🇧🇭', '🇯🇴', '🇮🇶', '🇱🇧'];
   const euroCountries = ['🇩🇪', '🇳🇱', '🇬🇧', '🇫🇷', '🇮🇹', '🇪🇸'];
+
+  const arabProducts = [
+    { src: orangeImg, alt: 'Orange' },
+    { src: guavaImg, alt: 'Guava' },
+    { src: mangoImg, alt: 'Mango' },
+    { src: ajwaImg, alt: 'Ajwa Dates' },
+  ];
+
+  const seafoodProducts = [
+    { src: shrimpImg, alt: 'Shrimp' },
+    { src: calamariImg, alt: 'Calamari' },
+    { src: fishFilletImg, alt: 'Fish Fillet' },
+  ];
+
+  const frozenBakeryProducts = [
+    { src: croissantImg, alt: 'Croissant' },
+    { src: konafaImg, alt: 'Konafa' },
+    { src: samboussaImg, alt: 'Samboussa' },
+  ];
 
   return (
     <div>
@@ -38,7 +89,6 @@ const Markets = () => {
                 </div>
                 <p className="text-muted-foreground mb-6 leading-relaxed">{t('markets.arab.desc')}</p>
                 
-                {/* Arab key products */}
                 <motion.div 
                   className="bg-primary/5 rounded-xl p-4 mb-6 border border-primary/10"
                   initial={{ opacity: 0, y: 10 }}
@@ -50,6 +100,7 @@ const Markets = () => {
                     <span className="font-semibold text-foreground text-sm">{t('markets.arab.products')}</span>
                   </div>
                   <p className="text-muted-foreground text-sm">{t('markets.arab.products.desc')}</p>
+                  <ProductThumbnails images={arabProducts} delay={0.15} />
                 </motion.div>
 
                 <div className="flex flex-wrap gap-3">
@@ -80,7 +131,6 @@ const Markets = () => {
                 </div>
                 <p className="text-muted-foreground mb-6 leading-relaxed">{t('markets.europe.desc')}</p>
                 
-                {/* Frozen Seafood sub-section */}
                 <motion.div 
                   className="bg-accent/5 rounded-xl p-4 mb-4 border border-accent/10"
                   initial={{ opacity: 0, y: 10 }}
@@ -93,9 +143,9 @@ const Markets = () => {
                     <span className="font-semibold text-foreground text-sm">{t('markets.europe.seafood')}</span>
                   </div>
                   <p className="text-muted-foreground text-sm">{t('markets.europe.seafood.desc')}</p>
+                  <ProductThumbnails images={seafoodProducts} delay={0.2} />
                 </motion.div>
 
-                {/* Frozen Bakery sub-section */}
                 <motion.div 
                   className="bg-primary/5 rounded-xl p-4 mb-6 border border-primary/10"
                   initial={{ opacity: 0, y: 10 }}
@@ -108,6 +158,7 @@ const Markets = () => {
                     <span className="font-semibold text-foreground text-sm">{t('markets.europe.frozen')}</span>
                   </div>
                   <p className="text-muted-foreground text-sm">{t('markets.europe.frozen.desc')}</p>
+                  <ProductThumbnails images={frozenBakeryProducts} delay={0.3} />
                 </motion.div>
 
                 <div className="flex flex-wrap gap-3">
