@@ -34,7 +34,7 @@ const Navbar = () => {
 
           {/* Desktop Nav - Left */}
           <div className="hidden lg:flex items-center gap-1">
-            {navLinks.slice(0, 4).map(link => (
+            {navLinks.slice(0, 5).map(link => (
               <Link
                 key={link.path}
                 to={link.path}
