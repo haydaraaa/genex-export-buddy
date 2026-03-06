@@ -57,7 +57,7 @@ const Navbar = () => {
 
           {/* Desktop Nav - Right + Language */}
           <div className="flex items-center gap-1 justify-start min-w-0">
-            {navLinks.slice(4).map(link => (
+            {navLinksRight.map(link => (
               <Link
                 key={link.path}
                 to={link.path}
