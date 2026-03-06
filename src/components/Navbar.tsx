@@ -98,8 +98,8 @@ const Navbar = () => {
         </div>
 
         {/* Mobile + Tablet */}
-        <div className="xl:hidden flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center">
+        <div className="xl:hidden relative flex items-center justify-end h-20">
+          <Link to="/" className="absolute start-1/2 -translate-x-1/2 flex items-center z-10">
             <img src={genexLogo} alt="GENEX" className="h-14 w-auto" />
           </Link>
           <div className="flex items-center gap-2">
