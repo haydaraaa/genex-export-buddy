@@ -13,13 +13,17 @@ const Contact = () => {
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: '✅', description: 'Message sent successfully!' });
+    const msg = `📩 *New Contact Message*%0A%0A👤 Name: ${contactForm.name}%0A📧 Email: ${contactForm.email}%0A%0A💬 Message:%0A${contactForm.message}`;
+    window.open(`https://wa.me/4915735334622?text=${encodeURIComponent(msg)}`, '_blank');
+    toast({ title: '✅', description: 'Opening WhatsApp...' });
     setContactForm({ name: '', email: '', message: '' });
   };
 
   const handleQuoteSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: '✅', description: 'Quote request submitted!' });
+    const msg = `📋 *Quote Request*%0A%0A📦 Product: ${quoteForm.product}%0A📏 Quantity: ${quoteForm.quantity}%0A🌍 Country: ${quoteForm.country}%0A🏢 Company: ${quoteForm.company}%0A📧 Email: ${quoteForm.email}%0A📱 Phone: ${quoteForm.phone}`;
+    window.open(`https://wa.me/4915735334622?text=${encodeURIComponent(msg)}`, '_blank');
+    toast({ title: '✅', description: 'Opening WhatsApp...' });
     setQuoteForm({ product: '', quantity: '', country: '', company: '', email: '', phone: '' });
   };
 
