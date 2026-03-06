@@ -51,7 +51,7 @@ const Navbar = () => {
           </div>
 
           {/* Logo - Perfectly Centered */}
-          <Link to="/" className="absolute start-1/2 -translate-x-1/2 flex items-center justify-center px-4 z-10">
+          <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center px-4 z-10">
             <img src={genexLogo} alt="GENEX" className="h-56 w-auto drop-shadow-lg" />
           </Link>
 
