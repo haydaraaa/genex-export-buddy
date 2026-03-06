@@ -46,7 +46,7 @@ const Navbar = () => {
 
           {/* Logo - Absolutely Centered */}
           <Link to="/" className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-10">
-            <img src={genexLogo} alt="GENEX" className="h-28 w-auto drop-shadow-lg" />
+            <img src={genexLogo} alt="GENEX" className="h-44 w-auto drop-shadow-lg" />
           </Link>
 
           {/* Desktop Nav - Right + Language */}
