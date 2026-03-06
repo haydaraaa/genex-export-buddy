@@ -32,9 +32,9 @@ const Navbar = () => {
     <nav className="fixed top-9 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md shadow-lg">
       <div className="container mx-auto px-4">
         {/* Desktop Nav (xl+) */}
-        <div className="hidden xl:grid xl:grid-cols-[1fr_auto_1fr] items-center gap-6 py-2">
+        <div className="hidden xl:flex items-center py-2 relative">
           {/* Desktop Nav - Left */}
-          <div className="flex items-center gap-1 justify-end min-w-0">
+          <div className="flex flex-1 items-center gap-1 justify-end pe-40 min-w-0">
             {navLinksLeft.map(link => (
               <Link
                 key={link.path}
@@ -50,13 +50,13 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Logo - Centered */}
-          <Link to="/" className="flex items-center justify-center px-4 shrink-0">
-            <img src={genexLogo} alt="GENEX" className="h-52 w-auto drop-shadow-lg" />
+          {/* Logo - Perfectly Centered */}
+          <Link to="/" className="absolute start-1/2 -translate-x-1/2 flex items-center justify-center px-4 z-10">
+            <img src={genexLogo} alt="GENEX" className="h-56 w-auto drop-shadow-lg" />
           </Link>
 
           {/* Desktop Nav - Right + Language */}
-          <div className="flex items-center gap-1 justify-start min-w-0">
+          <div className="flex flex-1 items-center gap-1 justify-start ps-40 min-w-0">
             {navLinksRight.map(link => (
               <Link
                 key={link.path}
@@ -105,7 +105,7 @@ const Navbar = () => {
         {/* Mobile + Tablet */}
         <div className="xl:hidden relative flex items-center justify-end h-20">
           <Link to="/" className="absolute start-1/2 -translate-x-1/2 flex items-center z-10">
-            <img src={genexLogo} alt="GENEX" className="h-28 w-auto" />
+            <img src={genexLogo} alt="GENEX" className="h-32 w-auto" />
           </Link>
           <div className="flex items-center gap-2">
             {/* Language Selector - Mobile */}
