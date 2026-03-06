@@ -5,17 +5,22 @@ import { languages } from '@/i18n/translations';
 import { Menu, X, Globe } from 'lucide-react';
 import genexLogo from '@/assets/logo.png';
 
-const navLinks = [
+const navLinksLeft = [
   { key: 'nav.home', path: '/' },
   { key: 'nav.about', path: '/about' },
   { key: 'nav.products', path: '/products' },
   { key: 'nav.markets', path: '/markets' },
+  { key: 'nav.faq', path: '/faq' },
+];
+
+const navLinksRight = [
   { key: 'nav.certificates', path: '/certificates' },
   { key: 'nav.gallery', path: '/gallery' },
   { key: 'nav.partners', path: '/partners' },
   { key: 'nav.contact', path: '/contact' },
-  { key: 'nav.faq', path: '/faq' },
 ];
+
+const allNavLinks = [...navLinksLeft, ...navLinksRight];
 
 const Navbar = () => {
   const { t, language, setLanguage } = useLanguage();
