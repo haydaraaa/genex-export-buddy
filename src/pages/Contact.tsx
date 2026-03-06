@@ -140,7 +140,7 @@ const Contact = () => {
                 </div>
 
                 <a
-                  href="https://wa.me/201234567890"
+                  href="https://wa.me/4915735334622"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 bg-primary-light hover:bg-primary text-primary-foreground px-6 py-4 rounded-2xl font-semibold text-lg transition-all shadow-lg hover:shadow-xl w-full"
