@@ -5,17 +5,22 @@ import { languages } from '@/i18n/translations';
 import { Menu, X, Globe } from 'lucide-react';
 import genexLogo from '@/assets/logo.png';
 
-const navLinks = [
+const navLinksLeft = [
   { key: 'nav.home', path: '/' },
   { key: 'nav.about', path: '/about' },
   { key: 'nav.products', path: '/products' },
   { key: 'nav.markets', path: '/markets' },
+  { key: 'nav.faq', path: '/faq' },
+];
+
+const navLinksRight = [
   { key: 'nav.certificates', path: '/certificates' },
   { key: 'nav.gallery', path: '/gallery' },
   { key: 'nav.partners', path: '/partners' },
   { key: 'nav.contact', path: '/contact' },
-  { key: 'nav.faq', path: '/faq' },
 ];
+
+const allNavLinks = [...navLinksLeft, ...navLinksRight];
 
 const Navbar = () => {
   const { t, language, setLanguage } = useLanguage();
@@ -30,7 +35,7 @@ const Navbar = () => {
         <div className="hidden xl:grid xl:grid-cols-[1fr_auto_1fr] items-center gap-6 py-2">
           {/* Desktop Nav - Left */}
           <div className="flex items-center gap-1 justify-end min-w-0">
-            {navLinks.slice(0, 4).map(link => (
+            {navLinksLeft.map(link => (
               <Link
                 key={link.path}
                 to={link.path}
@@ -45,14 +50,14 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Logo - In flow (no floating/overlap) */}
+          {/* Logo - Centered */}
           <Link to="/" className="flex items-center justify-center px-4 shrink-0">
-            <img src={genexLogo} alt="GENEX" className="h-44 w-auto drop-shadow-lg" />
+            <img src={genexLogo} alt="GENEX" className="h-52 w-auto drop-shadow-lg" />
           </Link>
 
           {/* Desktop Nav - Right + Language */}
           <div className="flex items-center gap-1 justify-start min-w-0">
-            {navLinks.slice(4).map(link => (
+            {navLinksRight.map(link => (
               <Link
                 key={link.path}
                 to={link.path}
@@ -142,7 +147,7 @@ const Navbar = () => {
         {/* Mobile Nav */}
         {open && (
           <div className="xl:hidden pb-4 border-t border-primary-foreground/10 mt-2 pt-2">
-            {navLinks.map(link => (
+            {allNavLinks.map(link => (
               <Link
                 key={link.path}
                 to={link.path}
