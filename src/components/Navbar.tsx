@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className="hidden xl:grid xl:grid-cols-[1fr_auto_1fr] items-center gap-6 py-2">
           {/* Desktop Nav - Left */}
           <div className="flex items-center gap-1 justify-end min-w-0">
-            {navLinks.slice(0, 4).map(link => (
+            {navLinksLeft.map(link => (
               <Link
                 key={link.path}
                 to={link.path}
@@ -50,9 +50,9 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Logo - In flow (no floating/overlap) */}
+          {/* Logo - Centered */}
           <Link to="/" className="flex items-center justify-center px-4 shrink-0">
-            <img src={genexLogo} alt="GENEX" className="h-44 w-auto drop-shadow-lg" />
+            <img src={genexLogo} alt="GENEX" className="h-52 w-auto drop-shadow-lg" />
           </Link>
 
           {/* Desktop Nav - Right + Language */}
