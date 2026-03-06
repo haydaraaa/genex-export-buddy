@@ -147,7 +147,7 @@ const Navbar = () => {
         {/* Mobile Nav */}
         {open && (
           <div className="xl:hidden pb-4 border-t border-primary-foreground/10 mt-2 pt-2">
-            {navLinks.map(link => (
+            {allNavLinks.map(link => (
               <Link
                 key={link.path}
                 to={link.path}
