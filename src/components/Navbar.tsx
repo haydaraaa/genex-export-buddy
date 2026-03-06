@@ -26,19 +26,14 @@ const Navbar = () => {
   return (
     <nav className="fixed top-9 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md shadow-lg">
       <div className="container mx-auto px-4">
-        <div className="relative flex items-center justify-between h-20">
-          {/* Logo - Absolutely Centered */}
-          <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center z-10">
-            <img src={genexLogo} alt="GENEX" className="h-48 w-auto" />
-          </Link>
-
+        <div className="relative flex items-center h-20">
           {/* Desktop Nav - Left */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1 flex-1 justify-end pe-24">
             {navLinks.slice(0, 4).map(link => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap ${
                   location.pathname === link.path
                     ? 'bg-primary-glow/20 text-primary-glow'
                     : 'text-primary-foreground/80 hover:text-primary-glow hover:bg-primary-foreground/5'
@@ -49,13 +44,18 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Desktop Nav - Right */}
-          <div className="hidden lg:flex items-center gap-1">
+          {/* Logo - Absolutely Centered */}
+          <Link to="/" className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-10">
+            <img src={genexLogo} alt="GENEX" className="h-28 w-auto drop-shadow-lg" />
+          </Link>
+
+          {/* Desktop Nav - Right + Language */}
+          <div className="hidden lg:flex items-center gap-1 flex-1 justify-start ps-24">
             {navLinks.slice(4).map(link => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap ${
                   location.pathname === link.path
                     ? 'bg-primary-glow/20 text-primary-glow'
                     : 'text-primary-foreground/80 hover:text-primary-glow hover:bg-primary-foreground/5'
@@ -64,21 +64,15 @@ const Navbar = () => {
                 {t(link.key)}
               </Link>
             ))}
-          </div>
 
-
-
-
-          {/* Language + Mobile toggle */}
-          <div className="flex items-center gap-2">
-            {/* Language Selector */}
-            <div className="relative">
+            {/* Language Selector - Desktop */}
+            <div className="relative ms-2">
               <button
                 onClick={() => setLangOpen(!langOpen)}
                 className="flex items-center gap-1 px-3 py-2 rounded-md text-primary-foreground/80 hover:text-primary-glow transition-colors text-sm"
               >
                 <Globe className="h-4 w-4" />
-                <span className="hidden sm:inline">{languages.find(l => l.code === language)?.name}</span>
+                <span>{languages.find(l => l.code === language)?.name}</span>
               </button>
               {langOpen && (
                 <div className="absolute top-full end-0 mt-1 bg-card rounded-lg shadow-xl border border-border py-1 min-w-[140px]">
@@ -96,14 +90,45 @@ const Navbar = () => {
                 </div>
               )}
             </div>
+          </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setOpen(!open)}
-              className="lg:hidden p-2 rounded-md text-primary-foreground/80 hover:text-primary-glow"
-            >
-              {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+          {/* Mobile: Logo left + controls right */}
+          <div className="lg:hidden flex items-center justify-between w-full">
+            <Link to="/" className="flex items-center">
+              <img src={genexLogo} alt="GENEX" className="h-14 w-auto" />
+            </Link>
+            <div className="flex items-center gap-2">
+              {/* Language Selector - Mobile */}
+              <div className="relative">
+                <button
+                  onClick={() => setLangOpen(!langOpen)}
+                  className="flex items-center gap-1 px-2 py-2 rounded-md text-primary-foreground/80 hover:text-primary-glow transition-colors text-sm"
+                >
+                  <Globe className="h-4 w-4" />
+                </button>
+                {langOpen && (
+                  <div className="absolute top-full end-0 mt-1 bg-card rounded-lg shadow-xl border border-border py-1 min-w-[140px]">
+                    {languages.map(lang => (
+                      <button
+                        key={lang.code}
+                        onClick={() => { setLanguage(lang.code); setLangOpen(false); }}
+                        className={`w-full text-start px-4 py-2 text-sm hover:bg-muted transition-colors ${
+                          language === lang.code ? 'text-primary font-semibold' : 'text-foreground'
+                        }`}
+                      >
+                        {lang.name}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <button
+                onClick={() => setOpen(!open)}
+                className="p-2 rounded-md text-primary-foreground/80 hover:text-primary-glow"
+              >
+                {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
           </div>
         </div>
 
