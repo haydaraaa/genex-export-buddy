@@ -291,8 +291,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.quote.send': 'إرسال الطلب',
     'contact.info.title': 'معلومات التواصل',
     'contact.info.address': 'القاهرة، مصر',
-    'contact.info.phone': '+20 123 456 7890',
-    'contact.info.email': 'info@genex-export.com',
+    'contact.info.phone': '+49 157 3533 4622',
+    'contact.info.email': 'info@genex-corp.com',
     'contact.whatsapp': 'تواصل عبر واتساب',
     // Footer
     'footer.desc': 'شركة GENEX للتصدير - نصدّر أجود الحاصلات الزراعية المصرية إلى العالم',
