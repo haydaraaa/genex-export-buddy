@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <div className="min-h-screen flex flex-col">
       <TopBar />
       <Navbar />
-      <main className="flex-1 pt-[calc(5rem+2.25rem)] lg:pt-[calc(5rem+2.25rem+3.25rem)]">
+      <main className="flex-1 pt-[calc(5rem+2.25rem)] xl:pt-[calc(12rem+2.25rem)]">
         {children}
       </main>
       <Footer />
