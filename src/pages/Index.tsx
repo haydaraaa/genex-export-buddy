@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
 import WhyUsSection from '@/components/WhyUsSection';
 import PartnersStrip from '@/components/PartnersStrip';
+import ProductSlider from '@/components/ProductSlider';
 import heroBg from '@/assets/hero-bg.jpg';
 import genexLogo from '@/assets/logo.png';
 import categoryFruits from '@/assets/category-fruits.jpg';
@@ -96,6 +97,9 @@ const Index = () => {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Featured Products Slider */}
+      <ProductSlider />
 
       {/* Why Us */}
       <WhyUsSection />
