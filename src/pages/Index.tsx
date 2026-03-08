@@ -98,6 +98,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Featured Products Slider */}
+      <ProductSlider />
+
       {/* Why Us */}
       <WhyUsSection />
 
