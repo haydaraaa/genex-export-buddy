@@ -4,10 +4,8 @@ import { ArrowLeft } from 'lucide-react';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
 import ProductCard from '@/components/ProductCard';
 import categoryHero from '@/assets/category-fruits.jpg';
-import orangeImg from '@/assets/products/orange.jpg';
 import strawberryImg from '@/assets/products/strawberry.jpg';
 import grapeImg from '@/assets/products/grape.jpg';
-import mangoImg from '@/assets/products/mango.jpg';
 import guavaImg from '@/assets/products/guava.jpg';
 import figImg from '@/assets/products/fig.jpg';
 import peachImg from '@/assets/products/peach.jpg';
@@ -15,22 +13,26 @@ import cantaloupeImg from '@/assets/products/cantaloupe.jpg';
 import watermelonAsset from '@/assets/products/watermelon-real.jpg.asset.json';
 import pomegranateAsset from '@/assets/products/pomegranate-real.jpg.asset.json';
 import lemonAsset from '@/assets/products/lemon-real2.jpg.asset.json';
+import mangoAsset from '@/assets/products/mango-real.jpg.asset.json';
+import orangeAsset from '@/assets/products/orange-real.jpg.asset.json';
+import physalisAsset from '@/assets/products/physalis-real.jpg.asset.json';
 
 const Fruits = () => {
   const { t, isRtl } = useLanguage();
 
   const products = [
-    { name: 'orange', img: orangeImg },
+    { name: 'orange', img: orangeAsset.url },
     { name: 'strawberry', img: strawberryImg },
     { name: 'grape', img: grapeImg },
     { name: 'pomegranate', img: pomegranateAsset.url },
-    { name: 'mango', img: mangoImg },
+    { name: 'mango', img: mangoAsset.url },
     { name: 'guava', img: guavaImg },
     { name: 'fig', img: figImg },
     { name: 'peach', img: peachImg },
     { name: 'watermelon', img: watermelonAsset.url },
     { name: 'lemon', img: lemonAsset.url },
     { name: 'cantaloupe', img: cantaloupeImg },
+    { name: 'physalis', img: physalisAsset.url },
   ];
 
   return (
