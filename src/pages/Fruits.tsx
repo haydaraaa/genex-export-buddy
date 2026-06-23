@@ -14,7 +14,7 @@ import peachImg from '@/assets/products/peach.jpg';
 import cantaloupeImg from '@/assets/products/cantaloupe.jpg';
 import watermelonAsset from '@/assets/products/watermelon-real.jpg.asset.json';
 import pomegranateAsset from '@/assets/products/pomegranate-real.jpg.asset.json';
-import lemonAsset from '@/assets/products/lemon-real.jpg.asset.json';
+import lemonAsset from '@/assets/products/lemon-real2.jpg.asset.json';
 
 const Fruits = () => {
   const { t, isRtl } = useLanguage();
