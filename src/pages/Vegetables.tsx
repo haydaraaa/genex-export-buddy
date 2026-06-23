@@ -6,7 +6,6 @@ import ProductCard from '@/components/ProductCard';
 import categoryHero from '@/assets/category-vegetables.jpg';
 import tomatoImg from '@/assets/products/tomato.jpg';
 import potatoImg from '@/assets/products/potato.jpg';
-import beansImg from '@/assets/products/beans.jpg';
 import cucumberImg from '@/assets/products/cucumber.jpg';
 import zucchiniImg from '@/assets/products/zucchini.jpg';
 import eggplantImg from '@/assets/products/eggplant.jpg';
@@ -18,6 +17,8 @@ import onionAsset from '@/assets/products/onion-real2.jpg.asset.json';
 import sweetPotatoAsset from '@/assets/products/sweet-potato-real.jpg.asset.json';
 import garlicAsset from '@/assets/products/garlic-real2.jpg.asset.json';
 import leekAsset from '@/assets/products/leek-real.jpg.asset.json';
+import springOnionAsset from '@/assets/products/spring-onion-real.jpg.asset.json';
+import snowPeasAsset from '@/assets/products/snow-peas-real.jpg.asset.json';
 
 const Vegetables = () => {
   const { t, isRtl } = useLanguage();
@@ -26,11 +27,12 @@ const Vegetables = () => {
     { name: 'tomato', img: tomatoImg },
     { name: 'pepper', img: pepperAsset.url },
     { name: 'onion', img: onionAsset.url },
+    { name: 'springOnion', img: springOnionAsset.url },
     { name: 'garlic', img: garlicAsset.url },
     { name: 'potato', img: potatoImg },
     { name: 'sweetPotato', img: sweetPotatoAsset.url },
     { name: 'leek', img: leekAsset.url },
-    { name: 'beans', img: beansImg },
+    { name: 'snowPeas', img: snowPeasAsset.url },
     { name: 'cucumber', img: cucumberImg },
     { name: 'zucchini', img: zucchiniImg },
     { name: 'eggplant', img: eggplantImg },
