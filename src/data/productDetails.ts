@@ -206,6 +206,7 @@ export const productDetails: Record<string, ProductDetail> = {
     origin: 'Minya, Egypt',
     season: 'April - August',
     grade: 'Premium Export Grade A',
+    gallery: watermelonGallery,
   },
   lemon: {
     id: 'lemon', img: lemonAsset.url, category: 'fruits',
