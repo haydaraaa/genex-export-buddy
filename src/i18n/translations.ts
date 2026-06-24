@@ -345,6 +345,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'productDetail.origin': 'بلد المنشأ',
     'productDetail.season': 'موسم الحصاد',
     'productDetail.certifications': 'الشهادات والاعتمادات الدولية',
+    'productDetail.gallery': 'معرض صور المنتج',
     'productDetail.certified': 'معتمد دولياً',
     'productDetail.whyPremium': 'لماذا منتجاتنا فاخرة؟',
     'productDetail.quality1.title': 'فحص جودة صارم متعدد المراحل',
