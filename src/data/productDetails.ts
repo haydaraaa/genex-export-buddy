@@ -1,18 +1,24 @@
 // Product detail data with EU specifications
-import orangeImg from '@/assets/products/orange.jpg';
+import orangeAsset from '@/assets/products/orange-real.jpg.asset.json';
 import strawberryImg from '@/assets/products/strawberry.jpg';
 import grapeImg from '@/assets/products/grape.jpg';
-import pomegranateImg from '@/assets/products/pomegranate.jpg';
-import mangoImg from '@/assets/products/mango.jpg';
+import pomegranateAsset from '@/assets/products/pomegranate-real.jpg.asset.json';
+import mangoAsset from '@/assets/products/mango-real.jpg.asset.json';
 import guavaImg from '@/assets/products/guava.jpg';
 import figImg from '@/assets/products/fig.jpg';
 import peachImg from '@/assets/products/peach.jpg';
-import watermelonImg from '@/assets/products/watermelon.jpg';
-import lemonImg from '@/assets/products/lemon.jpg';
+import watermelonAsset from '@/assets/products/watermelon-real.jpg.asset.json';
+import lemonAsset from '@/assets/products/lemon-real2.jpg.asset.json';
 import cantaloupeImg from '@/assets/products/cantaloupe.jpg';
+import physalisAsset from '@/assets/products/physalis-real.jpg.asset.json';
 import tomatoImg from '@/assets/products/tomato.jpg';
-import pepperImg from '@/assets/products/pepper.jpg';
-import onionImg from '@/assets/products/onion.jpg';
+import pepperAsset from '@/assets/products/pepper-real.jpg.asset.json';
+import onionAsset from '@/assets/products/onion-real2.jpg.asset.json';
+import springOnionAsset from '@/assets/products/spring-onion-real.jpg.asset.json';
+import garlicAsset from '@/assets/products/garlic-real2.jpg.asset.json';
+import leekAsset from '@/assets/products/leek-real.jpg.asset.json';
+import snowPeasAsset from '@/assets/products/snow-peas-real.jpg.asset.json';
+import sweetPotatoAsset from '@/assets/products/sweet-potato-real.jpg.asset.json';
 import potatoImg from '@/assets/products/potato.jpg';
 import beansImg from '@/assets/products/beans.jpg';
 import cucumberImg from '@/assets/products/cucumber.jpg';
@@ -88,7 +94,7 @@ export interface ProductDetail {
 
 export const productDetails: Record<string, ProductDetail> = {
   orange: {
-    id: 'orange', img: orangeImg, category: 'fruits',
+    id: 'orange', img: orangeAsset.url, category: 'fruits',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP', 'Organic'],
     euStandard: 'EU Reg. 543/2011 - Class Extra / Class I',
     shelfLife: '4-6 weeks',
@@ -121,7 +127,7 @@ export const productDetails: Record<string, ProductDetail> = {
     grade: 'Premium Export Grade A',
   },
   pomegranate: {
-    id: 'pomegranate', img: pomegranateImg, category: 'fruits',
+    id: 'pomegranate', img: pomegranateAsset.url, category: 'fruits',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class I',
     shelfLife: '2-3 months',
@@ -132,7 +138,7 @@ export const productDetails: Record<string, ProductDetail> = {
     grade: 'Premium Export Grade A',
   },
   mango: {
-    id: 'mango', img: mangoImg, category: 'fruits',
+    id: 'mango', img: mangoAsset.url, category: 'fruits',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class I',
     shelfLife: '2-3 weeks',
@@ -176,7 +182,7 @@ export const productDetails: Record<string, ProductDetail> = {
     grade: 'Premium Export Grade A',
   },
   watermelon: {
-    id: 'watermelon', img: watermelonImg, category: 'fruits',
+    id: 'watermelon', img: watermelonAsset.url, category: 'fruits',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class I',
     shelfLife: '2-3 weeks',
@@ -187,7 +193,7 @@ export const productDetails: Record<string, ProductDetail> = {
     grade: 'Premium Export Grade A',
   },
   lemon: {
-    id: 'lemon', img: lemonImg, category: 'fruits',
+    id: 'lemon', img: lemonAsset.url, category: 'fruits',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class I',
     shelfLife: '4-8 weeks',
@@ -220,7 +226,7 @@ export const productDetails: Record<string, ProductDetail> = {
     grade: 'Premium Export Grade A',
   },
   pepper: {
-    id: 'pepper', img: pepperImg, category: 'vegetables',
+    id: 'pepper', img: pepperAsset.url, category: 'vegetables',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class I',
     shelfLife: '2-3 weeks',
@@ -231,7 +237,7 @@ export const productDetails: Record<string, ProductDetail> = {
     grade: 'Premium Export Grade A',
   },
   onion: {
-    id: 'onion', img: onionImg, category: 'vegetables',
+    id: 'onion', img: onionAsset.url, category: 'vegetables',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class I',
     shelfLife: '3-6 months',
@@ -878,5 +884,71 @@ export const productDetails: Record<string, ProductDetail> = {
     origin: 'Egypt',
     season: 'Year-round (frozen)',
     grade: 'Premium Surimi Crab Sticks',
+  },
+  sweetPotato: {
+    id: 'sweetPotato', img: sweetPotatoAsset.url, category: 'vegetables',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '4-6 months',
+    storage: '12-15°C, 85-90% RH',
+    packaging: ['6 kg carton', '10 kg carton', '15 kg carton'],
+    origin: 'Beheira, Egypt',
+    season: 'September - March',
+    grade: 'Premium Export Grade A (S/M/L/XL)',
+  },
+  garlic: {
+    id: 'garlic', img: garlicAsset.url, category: 'vegetables',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '6-9 months',
+    storage: '0-2°C, 65-70% RH',
+    packaging: ['5 kg carton', '10 kg mesh bag', '20 kg mesh bag'],
+    origin: 'Minya, Egypt',
+    season: 'April - July',
+    grade: 'Premium White Export Grade',
+  },
+  leek: {
+    id: 'leek', img: leekAsset.url, category: 'vegetables',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '2-3 weeks',
+    storage: '0-2°C, 95-98% RH',
+    packaging: ['5 kg carton', '8 kg carton'],
+    origin: 'Nile Delta, Egypt',
+    season: 'October - April',
+    grade: 'Premium Export Grade A',
+  },
+  springOnion: {
+    id: 'springOnion', img: springOnionAsset.url, category: 'vegetables',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '2-3 weeks',
+    storage: '0-2°C, 95-98% RH',
+    packaging: ['3 kg carton', '5 kg carton'],
+    origin: 'Qalyubia, Egypt',
+    season: 'October - May',
+    grade: 'Premium Export Grade A',
+  },
+  snowPeas: {
+    id: 'snowPeas', img: snowPeasAsset.url, category: 'vegetables',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '10-14 days',
+    storage: '0-2°C, 95% RH',
+    packaging: ['2 kg carton', '4 kg carton'],
+    origin: 'Beheira, Egypt',
+    season: 'November - April',
+    grade: 'Premium Export Grade A',
+  },
+  physalis: {
+    id: 'physalis', img: physalisAsset.url, category: 'fruits',
+    certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
+    euStandard: 'EU Reg. 543/2011 - Class I',
+    shelfLife: '3-4 weeks',
+    storage: '4-8°C, 85-90% RH',
+    packaging: ['100g punnet', '125g punnet', '1.5 kg flat'],
+    origin: 'Minya, Egypt',
+    season: 'November - April',
+    grade: 'Premium Export Grade A',
   },
 };
