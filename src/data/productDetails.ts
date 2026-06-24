@@ -94,7 +94,7 @@ export interface ProductDetail {
 
 export const productDetails: Record<string, ProductDetail> = {
   orange: {
-    id: 'orange', img: orangeImg, category: 'fruits',
+    id: 'orange', img: orangeAsset.url, category: 'fruits',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP', 'Organic'],
     euStandard: 'EU Reg. 543/2011 - Class Extra / Class I',
     shelfLife: '4-6 weeks',
@@ -127,7 +127,7 @@ export const productDetails: Record<string, ProductDetail> = {
     grade: 'Premium Export Grade A',
   },
   pomegranate: {
-    id: 'pomegranate', img: pomegranateImg, category: 'fruits',
+    id: 'pomegranate', img: pomegranateAsset.url, category: 'fruits',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class I',
     shelfLife: '2-3 months',
@@ -138,7 +138,7 @@ export const productDetails: Record<string, ProductDetail> = {
     grade: 'Premium Export Grade A',
   },
   mango: {
-    id: 'mango', img: mangoImg, category: 'fruits',
+    id: 'mango', img: mangoAsset.url, category: 'fruits',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class I',
     shelfLife: '2-3 weeks',
@@ -182,7 +182,7 @@ export const productDetails: Record<string, ProductDetail> = {
     grade: 'Premium Export Grade A',
   },
   watermelon: {
-    id: 'watermelon', img: watermelonImg, category: 'fruits',
+    id: 'watermelon', img: watermelonAsset.url, category: 'fruits',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class I',
     shelfLife: '2-3 weeks',
@@ -193,7 +193,7 @@ export const productDetails: Record<string, ProductDetail> = {
     grade: 'Premium Export Grade A',
   },
   lemon: {
-    id: 'lemon', img: lemonImg, category: 'fruits',
+    id: 'lemon', img: lemonAsset.url, category: 'fruits',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class I',
     shelfLife: '4-8 weeks',
@@ -226,7 +226,7 @@ export const productDetails: Record<string, ProductDetail> = {
     grade: 'Premium Export Grade A',
   },
   pepper: {
-    id: 'pepper', img: pepperImg, category: 'vegetables',
+    id: 'pepper', img: pepperAsset.url, category: 'vegetables',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class I',
     shelfLife: '2-3 weeks',
@@ -237,7 +237,7 @@ export const productDetails: Record<string, ProductDetail> = {
     grade: 'Premium Export Grade A',
   },
   onion: {
-    id: 'onion', img: onionImg, category: 'vegetables',
+    id: 'onion', img: onionAsset.url, category: 'vegetables',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class I',
     shelfLife: '3-6 months',
