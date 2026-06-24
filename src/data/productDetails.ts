@@ -98,8 +98,14 @@ import garlicG2 from '@/assets/products/garlic-gallery/g2.jpg.asset.json';
 import garlicG3 from '@/assets/products/garlic-gallery/g3.jpg.asset.json';
 import garlicG4 from '@/assets/products/garlic-gallery/g4.jpg.asset.json';
 import garlicG5 from '@/assets/products/garlic-gallery/g5.jpg.asset.json';
+import wmG1 from '@/assets/products/watermelon-gallery/w1.jpg.asset.json';
+import wmG2 from '@/assets/products/watermelon-gallery/w2.jpg.asset.json';
+import wmG3 from '@/assets/products/watermelon-gallery/w3.jpg.asset.json';
+import wmG4 from '@/assets/products/watermelon-gallery/w4.jpg.asset.json';
+import wmG5 from '@/assets/products/watermelon-gallery/w5.jpg.asset.json';
 
 export const garlicGallery = [garlicG1.url, garlicG2.url, garlicG3.url, garlicG4.url, garlicG5.url];
+export const watermelonGallery = [wmG1.url, wmG2.url, wmG3.url, wmG4.url, wmG5.url];
 
 export const productDetails: Record<string, ProductDetail> = {
   orange: {
