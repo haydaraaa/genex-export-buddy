@@ -1422,6 +1422,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'productDetail.origin': 'Herkunftsland',
     'productDetail.season': 'Erntesaison',
     'productDetail.certifications': 'Internationale Zertifizierungen',
+    'productDetail.gallery': 'Produktgalerie',
     'productDetail.certified': 'International Zertifiziert',
     'productDetail.whyPremium': 'Warum Sind Unsere Produkte Premium?',
     'productDetail.quality1.title': 'Strenge Mehrstufige Qualitätsprüfung',
