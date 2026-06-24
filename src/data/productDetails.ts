@@ -915,6 +915,7 @@ export const productDetails: Record<string, ProductDetail> = {
     origin: 'Minya, Egypt',
     season: 'April - July',
     grade: 'Premium White Export Grade',
+    gallery: garlicGallery,
   },
   leek: {
     id: 'leek', img: leekAsset.url, category: 'vegetables',
