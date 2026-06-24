@@ -211,8 +211,40 @@ const ProductDetail = () => {
         </div>
       </section>
 
+      {/* Gallery */}
+      {product.gallery && product.gallery.length > 0 && (
+        <section className="py-16 bg-background border-t border-border">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <ScrollReveal>
+              <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
+                {t('productDetail.gallery')}
+              </h2>
+            </ScrollReveal>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+              {product.gallery.map((src, i) => (
+                <ScrollReveal key={i}>
+                  <motion.div
+                    whileHover={{ scale: 1.03 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden rounded-2xl border border-border shadow-md hover:shadow-xl aspect-square"
+                  >
+                    <img
+                      src={src}
+                      alt={`${t(`product.${product.id}`)} ${i + 1}`}
+                      loading="lazy"
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    />
+                  </motion.div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Certificates Section */}
       <section className="py-16 bg-muted/30">
+
         <div className="container mx-auto px-4 max-w-6xl">
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
