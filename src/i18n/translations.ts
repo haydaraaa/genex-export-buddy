@@ -704,6 +704,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'productDetail.origin': 'Country of Origin',
     'productDetail.season': 'Harvest Season',
     'productDetail.certifications': 'International Certifications',
+    'productDetail.gallery': 'Product Gallery',
     'productDetail.certified': 'Internationally Certified',
     'productDetail.whyPremium': 'Why Our Products Are Premium?',
     'productDetail.quality1.title': 'Rigorous Multi-Stage Quality Inspection',
