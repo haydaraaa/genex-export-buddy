@@ -90,7 +90,16 @@ export interface ProductDetail {
   origin: string;
   season: string;
   grade: string;
+  gallery?: string[];
 }
+
+import garlicG1 from '@/assets/products/garlic-gallery/g1.jpg.asset.json';
+import garlicG2 from '@/assets/products/garlic-gallery/g2.jpg.asset.json';
+import garlicG3 from '@/assets/products/garlic-gallery/g3.jpg.asset.json';
+import garlicG4 from '@/assets/products/garlic-gallery/g4.jpg.asset.json';
+import garlicG5 from '@/assets/products/garlic-gallery/g5.jpg.asset.json';
+
+export const garlicGallery = [garlicG1.url, garlicG2.url, garlicG3.url, garlicG4.url, garlicG5.url];
 
 export const productDetails: Record<string, ProductDetail> = {
   orange: {
