@@ -4,9 +4,9 @@ import { ArrowLeft } from 'lucide-react';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
 import ProductCard from '@/components/ProductCard';
 import categoryHero from '@/assets/category-fruits.jpg';
-import strawberryImg from '@/assets/products/strawberry.jpg';
+import strawberryAsset from '@/assets/products/strawberry-gallery/st2.jpg.asset.json';
 import grapeAsset from '@/assets/products/grape-gallery/g1.jpg.asset.json';
-import guavaImg from '@/assets/products/guava.jpg';
+import guavaAsset from '@/assets/products/guava-gallery/gv1.jpg.asset.json';
 import figImg from '@/assets/products/fig.jpg';
 import peachImg from '@/assets/products/peach.jpg';
 import cantaloupeImg from '@/assets/products/cantaloupe.jpg';
@@ -22,11 +22,11 @@ const Fruits = () => {
 
   const products = [
     { name: 'orange', img: orangeAsset.url },
-    { name: 'strawberry', img: strawberryImg },
+    { name: 'strawberry', img: strawberryAsset.url },
     { name: 'grape', img: grapeAsset.url },
     { name: 'pomegranate', img: pomegranateAsset.url },
     { name: 'mango', img: mangoAsset.url },
-    { name: 'guava', img: guavaImg },
+    { name: 'guava', img: guavaAsset.url },
     { name: 'fig', img: figImg },
     { name: 'peach', img: peachImg },
     { name: 'watermelon', img: watermelonAsset.url },
