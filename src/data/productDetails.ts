@@ -117,12 +117,25 @@ import mangoG5 from '@/assets/products/mango-gallery/m5.jpg.asset.json';
 import mangoG6 from '@/assets/products/mango-gallery/m6.jpg.asset.json';
 import mangoG7 from '@/assets/products/mango-gallery/m7.jpg.asset.json';
 import onionG1 from '@/assets/products/onion-gallery/o1.jpg.asset.json';
+import onionG2 from '@/assets/products/onion-gallery/o2.jpg.asset.json';
+import onionG3 from '@/assets/products/onion-gallery/o3.jpg.asset.json';
+import guavaG1 from '@/assets/products/guava-gallery/gv1.jpg.asset.json';
+import guavaG2 from '@/assets/products/guava-gallery/gv2.jpg.asset.json';
+import guavaG3 from '@/assets/products/guava-gallery/gv3.jpg.asset.json';
+import strawberryG1 from '@/assets/products/strawberry-gallery/st1.jpg.asset.json';
+import strawberryG2 from '@/assets/products/strawberry-gallery/st2.jpg.asset.json';
+import strawberryG3 from '@/assets/products/strawberry-gallery/st3.jpg.asset.json';
+import potatoG1 from '@/assets/products/potato-gallery/p1.jpg.asset.json';
+import potatoG2 from '@/assets/products/potato-gallery/p2.jpg.asset.json';
 
 export const garlicGallery = [garlicG1.url, garlicG2.url, garlicG3.url, garlicG4.url, garlicG5.url];
 export const watermelonGallery = [wmG1.url, wmG2.url, wmG3.url, wmG4.url, wmG5.url];
 export const grapeGallery = [grapeG1.url, grapeG2.url, grapeG3.url, grapeG4.url, grapeG5.url, grapeG6.url];
 export const mangoGallery = [mangoG1.url, mangoG2.url, mangoG3.url, mangoG4.url, mangoG5.url, mangoG6.url, mangoG7.url];
-export const onionGallery = [onionG1.url];
+export const onionGallery = [onionG1.url, onionG2.url, onionG3.url];
+export const guavaGallery = [guavaG1.url, guavaG2.url, guavaG3.url];
+export const strawberryGallery = [strawberryG1.url, strawberryG2.url, strawberryG3.url];
+export const potatoGallery = [potatoG1.url, potatoG2.url];
 
 export const productDetails: Record<string, ProductDetail> = {
   orange: {
@@ -137,7 +150,7 @@ export const productDetails: Record<string, ProductDetail> = {
     grade: 'Premium Export Grade A',
   },
   strawberry: {
-    id: 'strawberry', img: strawberryImg, category: 'fruits',
+    id: 'strawberry', img: strawberryG2.url, category: 'fruits',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class Extra / Class I',
     shelfLife: '7-10 days',
@@ -146,6 +159,7 @@ export const productDetails: Record<string, ProductDetail> = {
     origin: 'Ismailia, Egypt',
     season: 'December - April',
     grade: 'Premium Export Grade A',
+    gallery: strawberryGallery,
   },
   grape: {
     id: 'grape', img: grapeG1.url, category: 'fruits',
@@ -183,7 +197,7 @@ export const productDetails: Record<string, ProductDetail> = {
     gallery: mangoGallery,
   },
   guava: {
-    id: 'guava', img: guavaImg, category: 'fruits',
+    id: 'guava', img: guavaG1.url, category: 'fruits',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class I',
     shelfLife: '2-3 weeks',
@@ -192,6 +206,7 @@ export const productDetails: Record<string, ProductDetail> = {
     origin: 'Qalyubia, Egypt',
     season: 'September - January',
     grade: 'Premium Export Grade A',
+    gallery: guavaGallery,
   },
   fig: {
     id: 'fig', img: figImg, category: 'fruits',
@@ -284,7 +299,7 @@ export const productDetails: Record<string, ProductDetail> = {
     gallery: onionGallery,
   },
   potato: {
-    id: 'potato', img: potatoImg, category: 'vegetables',
+    id: 'potato', img: potatoG1.url, category: 'vegetables',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class I',
     shelfLife: '3-5 months',
@@ -293,6 +308,7 @@ export const productDetails: Record<string, ProductDetail> = {
     origin: 'Nubaria, Egypt',
     season: 'January - May, September - December',
     grade: 'Premium Export Grade A',
+    gallery: potatoGallery,
   },
   beans: {
     id: 'beans', img: beansImg, category: 'vegetables',
