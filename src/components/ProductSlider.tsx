@@ -7,17 +7,17 @@ import { motion } from 'framer-motion';
 import ScrollReveal from './ScrollReveal';
 
 // Import product images
-import orangeImg from '@/assets/products/orange.jpg';
+import orangeAsset from '@/assets/products/orange-real.jpg.asset.json';
 import strawberryImg from '@/assets/products/strawberry.jpg';
-import grapeImg from '@/assets/products/grape.jpg';
-import mangoImg from '@/assets/products/mango.jpg';
-import pomegranateImg from '@/assets/products/pomegranate.jpg';
+import grapeAsset from '@/assets/products/grape-gallery/g1.jpg.asset.json';
+import mangoAsset from '@/assets/products/mango-real.jpg.asset.json';
+import pomegranateAsset from '@/assets/products/pomegranate-real.jpg.asset.json';
 import guavaImg from '@/assets/products/guava.jpg';
 import tomatoImg from '@/assets/products/tomato.jpg';
-import pepperImg from '@/assets/products/pepper.jpg';
+import pepperAsset from '@/assets/products/pepper-real.jpg.asset.json';
 import cucumberImg from '@/assets/products/cucumber.jpg';
-import watermelonImg from '@/assets/products/watermelon.jpg';
-import lemonImg from '@/assets/products/lemon.jpg';
+import watermelonAsset from '@/assets/products/watermelon-real.jpg.asset.json';
+import lemonAsset from '@/assets/products/lemon-real2.jpg.asset.json';
 import peachImg from '@/assets/products/peach.jpg';
 
 const featuredProducts = [
