@@ -5,7 +5,7 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/Scroll
 import ProductCard from '@/components/ProductCard';
 import categoryHero from '@/assets/category-vegetables.jpg';
 import tomatoImg from '@/assets/products/tomato.jpg';
-import potatoImg from '@/assets/products/potato.jpg';
+import potatoAsset from '@/assets/products/potato-gallery/p1.jpg.asset.json';
 import cucumberImg from '@/assets/products/cucumber.jpg';
 import zucchiniImg from '@/assets/products/zucchini.jpg';
 import eggplantImg from '@/assets/products/eggplant.jpg';
@@ -29,7 +29,7 @@ const Vegetables = () => {
     { name: 'onion', img: onionAsset.url },
     { name: 'springOnion', img: springOnionAsset.url },
     { name: 'garlic', img: garlicAsset.url },
-    { name: 'potato', img: potatoImg },
+    { name: 'potato', img: potatoAsset.url },
     { name: 'sweetPotato', img: sweetPotatoAsset.url },
     { name: 'leek', img: leekAsset.url },
     { name: 'snowPeas', img: snowPeasAsset.url },
