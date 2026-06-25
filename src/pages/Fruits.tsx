@@ -5,7 +5,7 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/Scroll
 import ProductCard from '@/components/ProductCard';
 import categoryHero from '@/assets/category-fruits.jpg';
 import strawberryImg from '@/assets/products/strawberry.jpg';
-import grapeImg from '@/assets/products/grape.jpg';
+import grapeAsset from '@/assets/products/grape-gallery/g1.jpg.asset.json';
 import guavaImg from '@/assets/products/guava.jpg';
 import figImg from '@/assets/products/fig.jpg';
 import peachImg from '@/assets/products/peach.jpg';
