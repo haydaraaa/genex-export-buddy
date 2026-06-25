@@ -103,9 +103,17 @@ import wmG2 from '@/assets/products/watermelon-gallery/w2.jpg.asset.json';
 import wmG3 from '@/assets/products/watermelon-gallery/w3.jpg.asset.json';
 import wmG4 from '@/assets/products/watermelon-gallery/w4.jpg.asset.json';
 import wmG5 from '@/assets/products/watermelon-gallery/w5.jpg.asset.json';
+import grapeG1 from '@/assets/products/grape-gallery/g1.jpg.asset.json';
+import grapeG2 from '@/assets/products/grape-gallery/g2.jpg.asset.json';
+import grapeG3 from '@/assets/products/grape-gallery/g3.jpg.asset.json';
+import mangoG1 from '@/assets/products/mango-gallery/m1.jpg.asset.json';
+import mangoG2 from '@/assets/products/mango-gallery/m2.jpg.asset.json';
+import mangoG3 from '@/assets/products/mango-gallery/m3.jpg.asset.json';
 
 export const garlicGallery = [garlicG1.url, garlicG2.url, garlicG3.url, garlicG4.url, garlicG5.url];
 export const watermelonGallery = [wmG1.url, wmG2.url, wmG3.url, wmG4.url, wmG5.url];
+export const grapeGallery = [grapeG1.url, grapeG2.url, grapeG3.url];
+export const mangoGallery = [mangoG1.url, mangoG2.url, mangoG3.url];
 
 export const productDetails: Record<string, ProductDetail> = {
   orange: {
@@ -131,7 +139,7 @@ export const productDetails: Record<string, ProductDetail> = {
     grade: 'Premium Export Grade A',
   },
   grape: {
-    id: 'grape', img: grapeImg, category: 'fruits',
+    id: 'grape', img: grapeG1.url, category: 'fruits',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class Extra / Class I',
     shelfLife: '3-5 weeks',
@@ -140,6 +148,7 @@ export const productDetails: Record<string, ProductDetail> = {
     origin: 'Upper Egypt',
     season: 'June - October',
     grade: 'Premium Export Grade A',
+    gallery: grapeGallery,
   },
   pomegranate: {
     id: 'pomegranate', img: pomegranateAsset.url, category: 'fruits',
@@ -162,6 +171,7 @@ export const productDetails: Record<string, ProductDetail> = {
     origin: 'Ismailia, Egypt',
     season: 'July - October',
     grade: 'Premium Export Grade A',
+    gallery: mangoGallery,
   },
   guava: {
     id: 'guava', img: guavaImg, category: 'fruits',
