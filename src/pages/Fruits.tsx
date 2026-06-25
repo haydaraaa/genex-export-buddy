@@ -23,7 +23,7 @@ const Fruits = () => {
   const products = [
     { name: 'orange', img: orangeAsset.url },
     { name: 'strawberry', img: strawberryImg },
-    { name: 'grape', img: grapeImg },
+    { name: 'grape', img: grapeAsset.url },
     { name: 'pomegranate', img: pomegranateAsset.url },
     { name: 'mango', img: mangoAsset.url },
     { name: 'guava', img: guavaImg },
