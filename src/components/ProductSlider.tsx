@@ -7,31 +7,31 @@ import { motion } from 'framer-motion';
 import ScrollReveal from './ScrollReveal';
 
 // Import product images
-import orangeImg from '@/assets/products/orange.jpg';
+import orangeAsset from '@/assets/products/orange-real.jpg.asset.json';
 import strawberryImg from '@/assets/products/strawberry.jpg';
-import grapeImg from '@/assets/products/grape.jpg';
-import mangoImg from '@/assets/products/mango.jpg';
-import pomegranateImg from '@/assets/products/pomegranate.jpg';
+import grapeAsset from '@/assets/products/grape-gallery/g1.jpg.asset.json';
+import mangoAsset from '@/assets/products/mango-real.jpg.asset.json';
+import pomegranateAsset from '@/assets/products/pomegranate-real.jpg.asset.json';
 import guavaImg from '@/assets/products/guava.jpg';
 import tomatoImg from '@/assets/products/tomato.jpg';
-import pepperImg from '@/assets/products/pepper.jpg';
+import pepperAsset from '@/assets/products/pepper-real.jpg.asset.json';
 import cucumberImg from '@/assets/products/cucumber.jpg';
-import watermelonImg from '@/assets/products/watermelon.jpg';
-import lemonImg from '@/assets/products/lemon.jpg';
+import watermelonAsset from '@/assets/products/watermelon-real.jpg.asset.json';
+import lemonAsset from '@/assets/products/lemon-real2.jpg.asset.json';
 import peachImg from '@/assets/products/peach.jpg';
 
 const featuredProducts = [
-  { name: 'orange', img: orangeImg, category: 'fruits' },
+  { name: 'orange', img: orangeAsset.url, category: 'fruits' },
   { name: 'strawberry', img: strawberryImg, category: 'fruits' },
-  { name: 'grape', img: grapeImg, category: 'fruits' },
-  { name: 'mango', img: mangoImg, category: 'fruits' },
-  { name: 'pomegranate', img: pomegranateImg, category: 'fruits' },
+  { name: 'grape', img: grapeAsset.url, category: 'fruits' },
+  { name: 'mango', img: mangoAsset.url, category: 'fruits' },
+  { name: 'pomegranate', img: pomegranateAsset.url, category: 'fruits' },
   { name: 'guava', img: guavaImg, category: 'fruits' },
   { name: 'tomato', img: tomatoImg, category: 'vegetables' },
-  { name: 'pepper', img: pepperImg, category: 'vegetables' },
+  { name: 'pepper', img: pepperAsset.url, category: 'vegetables' },
   { name: 'cucumber', img: cucumberImg, category: 'vegetables' },
-  { name: 'watermelon', img: watermelonImg, category: 'fruits' },
-  { name: 'lemon', img: lemonImg, category: 'fruits' },
+  { name: 'watermelon', img: watermelonAsset.url, category: 'fruits' },
+  { name: 'lemon', img: lemonAsset.url, category: 'fruits' },
   { name: 'peach', img: peachImg, category: 'fruits' },
 ];
 
