@@ -281,6 +281,7 @@ export const productDetails: Record<string, ProductDetail> = {
     origin: 'Beni Suef, Egypt',
     season: 'February - June',
     grade: 'Premium Export Grade A',
+    gallery: onionGallery,
   },
   potato: {
     id: 'potato', img: potatoImg, category: 'vegetables',
