@@ -106,14 +106,23 @@ import wmG5 from '@/assets/products/watermelon-gallery/w5.jpg.asset.json';
 import grapeG1 from '@/assets/products/grape-gallery/g1.jpg.asset.json';
 import grapeG2 from '@/assets/products/grape-gallery/g2.jpg.asset.json';
 import grapeG3 from '@/assets/products/grape-gallery/g3.jpg.asset.json';
+import grapeG4 from '@/assets/products/grape-gallery/g4.jpg.asset.json';
+import grapeG5 from '@/assets/products/grape-gallery/g5.jpg.asset.json';
+import grapeG6 from '@/assets/products/grape-gallery/g6.jpg.asset.json';
 import mangoG1 from '@/assets/products/mango-gallery/m1.jpg.asset.json';
 import mangoG2 from '@/assets/products/mango-gallery/m2.jpg.asset.json';
 import mangoG3 from '@/assets/products/mango-gallery/m3.jpg.asset.json';
+import mangoG4 from '@/assets/products/mango-gallery/m4.jpg.asset.json';
+import mangoG5 from '@/assets/products/mango-gallery/m5.jpg.asset.json';
+import mangoG6 from '@/assets/products/mango-gallery/m6.jpg.asset.json';
+import mangoG7 from '@/assets/products/mango-gallery/m7.jpg.asset.json';
+import onionG1 from '@/assets/products/onion-gallery/o1.jpg.asset.json';
 
 export const garlicGallery = [garlicG1.url, garlicG2.url, garlicG3.url, garlicG4.url, garlicG5.url];
 export const watermelonGallery = [wmG1.url, wmG2.url, wmG3.url, wmG4.url, wmG5.url];
-export const grapeGallery = [grapeG1.url, grapeG2.url, grapeG3.url];
-export const mangoGallery = [mangoG1.url, mangoG2.url, mangoG3.url];
+export const grapeGallery = [grapeG1.url, grapeG2.url, grapeG3.url, grapeG4.url, grapeG5.url, grapeG6.url];
+export const mangoGallery = [mangoG1.url, mangoG2.url, mangoG3.url, mangoG4.url, mangoG5.url, mangoG6.url, mangoG7.url];
+export const onionGallery = [onionG1.url];
 
 export const productDetails: Record<string, ProductDetail> = {
   orange: {
