@@ -139,7 +139,7 @@ export const productDetails: Record<string, ProductDetail> = {
     grade: 'Premium Export Grade A',
   },
   grape: {
-    id: 'grape', img: grapeImg, category: 'fruits',
+    id: 'grape', img: grapeG1.url, category: 'fruits',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class Extra / Class I',
     shelfLife: '3-5 weeks',
@@ -148,6 +148,7 @@ export const productDetails: Record<string, ProductDetail> = {
     origin: 'Upper Egypt',
     season: 'June - October',
     grade: 'Premium Export Grade A',
+    gallery: grapeGallery,
   },
   pomegranate: {
     id: 'pomegranate', img: pomegranateAsset.url, category: 'fruits',
