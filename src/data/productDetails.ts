@@ -171,6 +171,7 @@ export const productDetails: Record<string, ProductDetail> = {
     origin: 'Ismailia, Egypt',
     season: 'July - October',
     grade: 'Premium Export Grade A',
+    gallery: mangoGallery,
   },
   guava: {
     id: 'guava', img: guavaImg, category: 'fruits',
