@@ -21,17 +21,17 @@ import lemonAsset from '@/assets/products/lemon-real2.jpg.asset.json';
 import peachImg from '@/assets/products/peach.jpg';
 
 const featuredProducts = [
-  { name: 'orange', img: orangeImg, category: 'fruits' },
+  { name: 'orange', img: orangeAsset.url, category: 'fruits' },
   { name: 'strawberry', img: strawberryImg, category: 'fruits' },
-  { name: 'grape', img: grapeImg, category: 'fruits' },
-  { name: 'mango', img: mangoImg, category: 'fruits' },
-  { name: 'pomegranate', img: pomegranateImg, category: 'fruits' },
+  { name: 'grape', img: grapeAsset.url, category: 'fruits' },
+  { name: 'mango', img: mangoAsset.url, category: 'fruits' },
+  { name: 'pomegranate', img: pomegranateAsset.url, category: 'fruits' },
   { name: 'guava', img: guavaImg, category: 'fruits' },
   { name: 'tomato', img: tomatoImg, category: 'vegetables' },
-  { name: 'pepper', img: pepperImg, category: 'vegetables' },
+  { name: 'pepper', img: pepperAsset.url, category: 'vegetables' },
   { name: 'cucumber', img: cucumberImg, category: 'vegetables' },
-  { name: 'watermelon', img: watermelonImg, category: 'fruits' },
-  { name: 'lemon', img: lemonImg, category: 'fruits' },
+  { name: 'watermelon', img: watermelonAsset.url, category: 'fruits' },
+  { name: 'lemon', img: lemonAsset.url, category: 'fruits' },
   { name: 'peach', img: peachImg, category: 'fruits' },
 ];
 
