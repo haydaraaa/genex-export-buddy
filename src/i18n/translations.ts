@@ -759,7 +759,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.gallery': 'Galerie',
     'nav.partners': 'Partenaires',
     'nav.contact': 'Contact',
-    'hero.title': 'GENEX Export',
+    'hero.title': 'GENEX Harvest',
     'hero.subtitle': 'Exporter les meilleurs produits agricoles égyptiens dans le monde',
     'hero.cta': 'Contactez-nous',
     'hero.products': 'Nos Produits',
