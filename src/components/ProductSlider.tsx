@@ -26,7 +26,7 @@ const featuredProducts = [
   { name: 'grape', img: grapeAsset.url, category: 'fruits' },
   { name: 'mango', img: mangoAsset.url, category: 'fruits' },
   { name: 'pomegranate', img: pomegranateAsset.url, category: 'fruits' },
-  { name: 'guava', img: guavaImg, category: 'fruits' },
+  { name: 'guava', img: guavaAsset.url, category: 'fruits' },
   { name: 'tomato', img: tomatoImg, category: 'vegetables' },
   { name: 'pepper', img: pepperAsset.url, category: 'vegetables' },
   { name: 'cucumber', img: cucumberImg, category: 'vegetables' },
