@@ -8,11 +8,11 @@ import ScrollReveal from './ScrollReveal';
 
 // Import product images
 import orangeAsset from '@/assets/products/orange-real.jpg.asset.json';
-import strawberryImg from '@/assets/products/strawberry.jpg';
+import strawberryAsset from '@/assets/products/strawberry-gallery/st1.jpg.asset.json';
 import grapeAsset from '@/assets/products/grape-gallery/g1.jpg.asset.json';
 import mangoAsset from '@/assets/products/mango-real.jpg.asset.json';
 import pomegranateAsset from '@/assets/products/pomegranate-real.jpg.asset.json';
-import guavaImg from '@/assets/products/guava.jpg';
+import guavaAsset from '@/assets/products/guava-gallery/gv1.jpg.asset.json';
 import tomatoImg from '@/assets/products/tomato.jpg';
 import pepperAsset from '@/assets/products/pepper-real.jpg.asset.json';
 import cucumberImg from '@/assets/products/cucumber.jpg';
