@@ -1032,7 +1032,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.info.phone': '+49 157 3533 4622',
     'contact.info.email': 'info@genex-corp.com',
     'contact.whatsapp': 'WhatsApp',
-    'footer.desc': 'GENEX Export - Exporter les meilleurs produits agricoles égyptiens',
+    'footer.desc': 'GENEX Harvest - Exporter les meilleurs produits agricoles égyptiens',
     'footer.links': 'Liens rapides',
     'footer.contact': 'Contact',
     'footer.rights': '© 2025 GENEX. Tous droits réservés',
