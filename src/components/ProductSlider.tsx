@@ -22,7 +22,7 @@ import peachImg from '@/assets/products/peach.jpg';
 
 const featuredProducts = [
   { name: 'orange', img: orangeAsset.url, category: 'fruits' },
-  { name: 'strawberry', img: strawberryImg, category: 'fruits' },
+  { name: 'strawberry', img: strawberryAsset.url, category: 'fruits' },
   { name: 'grape', img: grapeAsset.url, category: 'fruits' },
   { name: 'mango', img: mangoAsset.url, category: 'fruits' },
   { name: 'pomegranate', img: pomegranateAsset.url, category: 'fruits' },
