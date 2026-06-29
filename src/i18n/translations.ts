@@ -26,7 +26,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'hero.products': 'منتجاتنا',
     // About snippet
     'about.snippet.title': 'من نحن',
-    'about.snippet.text': 'GENEX شركة رائدة في تصدير الحاصلات الزراعية المصرية بأعلى معايير الجودة العالمية. نصدّر الفواكه والخضروات الطازجة إلى الدول العربية والخليجية، والمعلبات والبقوليات إلى أوروبا.',
+    'about.snippet.text': 'GENEX Harvest شركة رائدة في تصدير الحاصلات الزراعية المصرية بأعلى معايير الجودة العالمية. نصدّر الفواكه والخضروات الطازجة إلى الدول العربية والخليجية، والمعلبات والبقوليات إلى أوروبا.',
     // Products
     'products.title': 'منتجاتنا',
     'products.fruits': 'الفواكه',
@@ -55,7 +55,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // About page
     'about.title': 'من نحن',
     'about.story.title': 'قصتنا',
-    'about.story.text': 'تأسست GENEX برؤية واضحة: تقديم أجود المنتجات الزراعية المصرية للعالم. بدأنا رحلتنا بشغف كبير بالزراعة المصرية وإيمان راسخ بجودة منتجاتنا، لنصبح اليوم واحدة من أبرز شركات التصدير الزراعي.',
+    'about.story.text': 'تأسست GENEX Harvest برؤية واضحة: تقديم أجود المنتجات الزراعية المصرية للعالم. بدأنا رحلتنا بشغف كبير بالزراعة المصرية وإيمان راسخ بجودة منتجاتنا، لنصبح اليوم واحدة من أبرز شركات التصدير الزراعي.',
     'about.vision.title': 'رؤيتنا',
     'about.vision.text': 'أن نكون الخيار الأول للمستوردين حول العالم في مجال الحاصلات الزراعية المصرية.',
     'about.mission.title': 'رسالتنا',
@@ -307,13 +307,13 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.info.email': 'info@genex-corp.com',
     'contact.whatsapp': 'تواصل عبر واتساب',
     // Footer
-    'footer.desc': 'شركة GENEX للتصدير - نصدّر أجود الحاصلات الزراعية المصرية إلى العالم',
+    'footer.desc': 'GENEX Harvest - نصدّر أجود الحاصلات الزراعية المصرية إلى العالم',
     'footer.links': 'روابط سريعة',
     'footer.contact': 'تواصل معنا',
-    'footer.rights': '© 2025 GENEX. جميع الحقوق محفوظة',
+    'footer.rights': '© 2025 GENEX Harvest. جميع الحقوق محفوظة',
     'footer.social': 'تابعنا',
     // Why Us
-    'whyUs.title': 'لماذا GENEX؟',
+    'whyUs.title': 'لماذا GENEX Harvest؟',
     'whyUs.subtitle': 'مزايا تنافسية تجعلنا الخيار الأول للمستوردين',
     'whyUs.quality.title': 'جودة عالمية',
     'whyUs.quality.desc': 'جميع منتجاتنا تخضع لفحوصات جودة صارمة ومطابقة للمعايير الأوروبية والدولية',
