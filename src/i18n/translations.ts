@@ -20,7 +20,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.partners': 'شركاؤنا',
     'nav.contact': 'تواصل معنا',
     // Hero
-    'hero.title': 'GENEX للتصدير',
+    'hero.title': 'GENEX Harvest',
     'hero.subtitle': 'نصدّر أجود الحاصلات الزراعية المصرية إلى العالم',
     'hero.cta': 'تواصل معنا',
     'hero.products': 'منتجاتنا',
