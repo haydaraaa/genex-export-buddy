@@ -12,6 +12,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Nav
     'nav.home': 'الرئيسية',
     'topbar.location': 'سموحة، الإسكندرية، مصر',
+    'topbar.location.hannover': 'هانوفر، ألمانيا',
     'nav.about': 'من نحن',
     'nav.products': 'منتجاتنا',
     'nav.markets': 'أسواقنا',
@@ -303,6 +304,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.quote.send': 'إرسال الطلب',
     'contact.info.title': 'معلومات التواصل',
     'contact.info.address': 'القاهرة، مصر',
+    'contact.info.address.hannover': 'هانوفر، ألمانيا',
     'contact.info.phone': '+49 157 3533 4622',
     'contact.info.email': 'info@genex-corp.com',
     'contact.whatsapp': 'تواصل عبر واتساب',
@@ -392,6 +394,7 @@ export const translations: Record<Language, Record<string, string>> = {
   en: {
     'nav.home': 'Home',
     'topbar.location': 'Smouha, Alexandria, Egypt',
+    'topbar.location.hannover': 'Hannover, Germany',
     'nav.about': 'About Us',
     'nav.products': 'Products',
     'nav.markets': 'Markets',
@@ -669,6 +672,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.quote.send': 'Submit Request',
     'contact.info.title': 'Contact Information',
     'contact.info.address': 'Cairo, Egypt',
+    'contact.info.address.hannover': 'Hannover, Germany',
     'contact.info.phone': '+49 157 3533 4622',
     'contact.info.email': 'info@genex-corp.com',
     'contact.whatsapp': 'Chat on WhatsApp',
@@ -752,6 +756,7 @@ export const translations: Record<Language, Record<string, string>> = {
   fr: {
     'nav.home': 'Accueil',
     'topbar.location': 'Smouha, Alexandrie, Égypte',
+    'topbar.location.hannover': 'Hanovre, Allemagne',
     'nav.about': 'À Propos',
     'nav.products': 'Produits',
     'nav.markets': 'Marchés',
@@ -1029,6 +1034,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.quote.send': 'Envoyer la demande',
     'contact.info.title': 'Informations de contact',
     'contact.info.address': 'Le Caire, Égypte',
+    'contact.info.address.hannover': 'Hanovre, Allemagne',
     'contact.info.phone': '+49 157 3533 4622',
     'contact.info.email': 'info@genex-corp.com',
     'contact.whatsapp': 'WhatsApp',
@@ -1112,6 +1118,7 @@ export const translations: Record<Language, Record<string, string>> = {
   de: {
     'nav.home': 'Startseite',
     'topbar.location': 'Smouha, Alexandria, Ägypten',
+    'topbar.location.hannover': 'Hannover, Deutschland',
     'nav.about': 'Über uns',
     'nav.products': 'Produkte',
     'nav.markets': 'Märkte',
@@ -1389,6 +1396,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.quote.send': 'Anfrage senden',
     'contact.info.title': 'Kontaktinformationen',
     'contact.info.address': 'Kairo, Ägypten',
+    'contact.info.address.hannover': 'Hannover, Deutschland',
     'contact.info.phone': '+49 157 3533 4622',
     'contact.info.email': 'info@genex-corp.com',
     'contact.whatsapp': 'WhatsApp',

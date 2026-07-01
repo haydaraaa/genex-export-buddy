@@ -122,6 +122,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <div className="font-medium text-foreground">{t('contact.info.address')}</div>
+                        <div className="text-muted-foreground text-sm">{t('contact.info.address.hannover')}</div>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
