@@ -58,9 +58,12 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4 text-primary-glow">{t('footer.contact')}</h3>
             <div className="space-y-3">
-              <div className="flex items-center gap-3 text-sm text-primary-foreground/70">
-                <MapPin className="h-4 w-4 shrink-0" />
-                <span>{t('contact.info.address')}</span>
+              <div className="flex items-start gap-3 text-sm text-primary-foreground/70">
+                <MapPin className="h-4 w-4 shrink-0 mt-0.5" />
+                <div>
+                  <div>{t('contact.info.address')}</div>
+                  <div>{t('contact.info.address.hannover')}</div>
+                </div>
               </div>
               <div className="flex items-center gap-3 text-sm text-primary-foreground/70">
                 <Phone className="h-4 w-4 shrink-0" />
