@@ -265,7 +265,7 @@ export const productDetails: Record<string, ProductDetail> = {
     grade: 'Premium Export Grade A',
   },
   tomato: {
-    id: 'tomato', img: tomatoImg, category: 'vegetables',
+    id: 'tomato', img: tomatoAsset.url, category: 'vegetables',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class Extra / Class I',
     shelfLife: '2-3 weeks',
