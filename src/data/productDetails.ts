@@ -135,7 +135,7 @@ import potatoG2 from '@/assets/products/potato-gallery/p2.jpg.asset.json';
 export const garlicGallery = [garlicG1.url, garlicG2.url, garlicG3.url, garlicG4.url, garlicG5.url];
 export const watermelonGallery = [wmG1.url, wmG2.url, wmG3.url, wmG4.url, wmG5.url];
 export const grapeGallery = [grapeG1.url, grapeG2.url, grapeG3.url, grapeG4.url, grapeG5.url, grapeG6.url];
-export const mangoGallery = [mangoG1.url, mangoG2.url, mangoG3.url, mangoG4.url, mangoG5.url, mangoG6.url, mangoG7.url];
+export const mangoGallery = [mangoG1.url, mangoG2.url, mangoG3.url, mangoG4.url, mangoG5.url, mangoG6.url, mangoG7.url, mangoG8.url, mangoG9.url, mangoG10.url, mangoG11.url];
 export const onionGallery = [onionG1.url, onionG2.url, onionG3.url];
 export const guavaGallery = [guavaG1.url, guavaG2.url, guavaG3.url];
 export const strawberryGallery = [strawberryG1.url, strawberryG2.url, strawberryG3.url];
