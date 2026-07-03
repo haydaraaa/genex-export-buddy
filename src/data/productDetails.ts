@@ -11,7 +11,7 @@ import watermelonAsset from '@/assets/products/watermelon-real.jpg.asset.json';
 import lemonAsset from '@/assets/products/lemon-real2.jpg.asset.json';
 import cantaloupeImg from '@/assets/products/cantaloupe.jpg';
 import physalisAsset from '@/assets/products/physalis-real.jpg.asset.json';
-import tomatoImg from '@/assets/products/tomato.jpg';
+import tomatoAsset from '@/assets/products/tomato-real.webp.asset.json';
 import pepperAsset from '@/assets/products/pepper-real.jpg.asset.json';
 import onionAsset from '@/assets/products/onion-real2.jpg.asset.json';
 import springOnionAsset from '@/assets/products/spring-onion-real.jpg.asset.json';
@@ -116,6 +116,10 @@ import mangoG4 from '@/assets/products/mango-gallery/m4.jpg.asset.json';
 import mangoG5 from '@/assets/products/mango-gallery/m5.jpg.asset.json';
 import mangoG6 from '@/assets/products/mango-gallery/m6.jpg.asset.json';
 import mangoG7 from '@/assets/products/mango-gallery/m7.jpg.asset.json';
+import mangoG8 from '@/assets/products/mango-gallery/m8.jpg.asset.json';
+import mangoG9 from '@/assets/products/mango-gallery/m9.jpg.asset.json';
+import mangoG10 from '@/assets/products/mango-gallery/m10.jpg.asset.json';
+import mangoG11 from '@/assets/products/mango-gallery/m11.jpg.asset.json';
 import onionG1 from '@/assets/products/onion-gallery/o1.jpg.asset.json';
 import onionG2 from '@/assets/products/onion-gallery/o2.jpg.asset.json';
 import onionG3 from '@/assets/products/onion-gallery/o3.jpg.asset.json';
@@ -131,7 +135,7 @@ import potatoG2 from '@/assets/products/potato-gallery/p2.jpg.asset.json';
 export const garlicGallery = [garlicG1.url, garlicG2.url, garlicG3.url, garlicG4.url, garlicG5.url];
 export const watermelonGallery = [wmG1.url, wmG2.url, wmG3.url, wmG4.url, wmG5.url];
 export const grapeGallery = [grapeG1.url, grapeG2.url, grapeG3.url, grapeG4.url, grapeG5.url, grapeG6.url];
-export const mangoGallery = [mangoG1.url, mangoG2.url, mangoG3.url, mangoG4.url, mangoG5.url, mangoG6.url, mangoG7.url];
+export const mangoGallery = [mangoG1.url, mangoG2.url, mangoG3.url, mangoG4.url, mangoG5.url, mangoG6.url, mangoG7.url, mangoG8.url, mangoG9.url, mangoG10.url, mangoG11.url];
 export const onionGallery = [onionG1.url, onionG2.url, onionG3.url];
 export const guavaGallery = [guavaG1.url, guavaG2.url, guavaG3.url];
 export const strawberryGallery = [strawberryG1.url, strawberryG2.url, strawberryG3.url];
@@ -265,7 +269,7 @@ export const productDetails: Record<string, ProductDetail> = {
     grade: 'Premium Export Grade A',
   },
   tomato: {
-    id: 'tomato', img: tomatoImg, category: 'vegetables',
+    id: 'tomato', img: tomatoAsset.url, category: 'vegetables',
     certificates: ['GlobalGAP', 'ISO 22000', 'HACCP'],
     euStandard: 'EU Reg. 543/2011 - Class Extra / Class I',
     shelfLife: '2-3 weeks',

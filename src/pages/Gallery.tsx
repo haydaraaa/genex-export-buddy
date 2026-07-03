@@ -10,6 +10,10 @@ import farm3 from '@/assets/gallery/farms/fb_img_1782349948461_2.jpg.asset.json'
 import farm4 from '@/assets/gallery/farms/img_20260508_wa0021.jpg.asset.json';
 import farm5 from '@/assets/gallery/farms/img_20260508_wa0051.jpg.asset.json';
 import farm6 from '@/assets/gallery/farms/img_20260508_wa0053.jpg.asset.json';
+import ship1 from '@/assets/gallery/shipping/ship1.jpg.asset.json';
+import ship2 from '@/assets/gallery/shipping/ship2.jpg.asset.json';
+import ship3 from '@/assets/gallery/shipping/ship3.jpg.asset.json';
+import ship4 from '@/assets/gallery/shipping/ship4.jpg.asset.json';
 
 const galleryItems = [
   { src: farm1.url, category: 'farms', alt: 'Black grape vineyard' },
@@ -23,6 +27,10 @@ const galleryItems = [
   { src: 'https://images.unsplash.com/photo-1595855759920-86582396756a?w=600', category: 'products', alt: 'Citrus fruits' },
   { src: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600', category: 'farms', alt: 'Green field' },
   { src: 'https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=600', category: 'packing', alt: 'Fruit packing' },
+  { src: ship1.url, category: 'shipping', alt: 'Onion export packing yard' },
+  { src: ship2.url, category: 'shipping', alt: 'Refrigerated containers loading (Maersk & Hamburg Süd)' },
+  { src: ship3.url, category: 'shipping', alt: 'Red onion bags ready for export' },
+  { src: ship4.url, category: 'shipping', alt: 'Loading onion bags into refrigerated truck' },
   { src: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600', category: 'shipping', alt: 'Container shipping' },
   { src: 'https://images.unsplash.com/photo-1518977676601-b53f82ber5?w=600', category: 'products', alt: 'Fresh fruits' },
   { src: 'https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=600', category: 'products', alt: 'Pomegranates' },
