@@ -24,7 +24,7 @@ const Vegetables = () => {
   const { t, isRtl } = useLanguage();
 
   const products = [
-    { name: 'tomato', img: tomatoImg },
+    { name: 'tomato', img: tomatoAsset.url },
     { name: 'pepper', img: pepperAsset.url },
     { name: 'onion', img: onionAsset.url },
     { name: 'springOnion', img: springOnionAsset.url },
