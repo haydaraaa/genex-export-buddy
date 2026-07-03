@@ -4,7 +4,20 @@ import { X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ScrollReveal from '@/components/ScrollReveal';
 
+import farm1 from '@/assets/gallery/farms/fb_img_1782351121654_2.jpg.asset.json';
+import farm2 from '@/assets/gallery/farms/fb_img_1782350031352_2.jpg.asset.json';
+import farm3 from '@/assets/gallery/farms/fb_img_1782349948461_2.jpg.asset.json';
+import farm4 from '@/assets/gallery/farms/img_20260508_wa0021.jpg.asset.json';
+import farm5 from '@/assets/gallery/farms/img_20260508_wa0051.jpg.asset.json';
+import farm6 from '@/assets/gallery/farms/img_20260508_wa0053.jpg.asset.json';
+
 const galleryItems = [
+  { src: farm1.url, category: 'farms', alt: 'Black grape vineyard' },
+  { src: farm2.url, category: 'farms', alt: 'Green grape vineyard' },
+  { src: farm3.url, category: 'farms', alt: 'Mango orchard' },
+  { src: farm4.url, category: 'farms', alt: 'Fresh snow peas from the field' },
+  { src: farm5.url, category: 'farms', alt: 'Physalis plant in the field' },
+  { src: farm6.url, category: 'farms', alt: 'Spring onion harvest' },
   { src: 'https://images.unsplash.com/photo-1573246123716-6b1782bfc499?w=600', category: 'products', alt: 'Fresh vegetables' },
   { src: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600', category: 'farms', alt: 'Agricultural farm' },
   { src: 'https://images.unsplash.com/photo-1595855759920-86582396756a?w=600', category: 'products', alt: 'Citrus fruits' },
