@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
 import ProductCard from '@/components/ProductCard';
 import categoryHero from '@/assets/category-vegetables.jpg';
-import tomatoImg from '@/assets/products/tomato.jpg';
+import tomatoAsset from '@/assets/products/tomato-real.webp.asset.json';
 import potatoAsset from '@/assets/products/potato-gallery/p1.jpg.asset.json';
 import cucumberImg from '@/assets/products/cucumber.jpg';
 import zucchiniImg from '@/assets/products/zucchini.jpg';
