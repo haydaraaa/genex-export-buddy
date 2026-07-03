@@ -11,7 +11,7 @@ import watermelonAsset from '@/assets/products/watermelon-real.jpg.asset.json';
 import lemonAsset from '@/assets/products/lemon-real2.jpg.asset.json';
 import cantaloupeImg from '@/assets/products/cantaloupe.jpg';
 import physalisAsset from '@/assets/products/physalis-real.jpg.asset.json';
-import tomatoImg from '@/assets/products/tomato.jpg';
+import tomatoAsset from '@/assets/products/tomato-real.webp.asset.json';
 import pepperAsset from '@/assets/products/pepper-real.jpg.asset.json';
 import onionAsset from '@/assets/products/onion-real2.jpg.asset.json';
 import springOnionAsset from '@/assets/products/spring-onion-real.jpg.asset.json';
