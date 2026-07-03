@@ -13,7 +13,7 @@ import grapeAsset from '@/assets/products/grape-gallery/g1.jpg.asset.json';
 import mangoAsset from '@/assets/products/mango-real.jpg.asset.json';
 import pomegranateAsset from '@/assets/products/pomegranate-real.jpg.asset.json';
 import guavaAsset from '@/assets/products/guava-gallery/gv1.jpg.asset.json';
-import tomatoImg from '@/assets/products/tomato.jpg';
+import tomatoAsset from '@/assets/products/tomato-real.webp.asset.json';
 import pepperAsset from '@/assets/products/pepper-real.jpg.asset.json';
 import cucumberImg from '@/assets/products/cucumber.jpg';
 import watermelonAsset from '@/assets/products/watermelon-real.jpg.asset.json';
