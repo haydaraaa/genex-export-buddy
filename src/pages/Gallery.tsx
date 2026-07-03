@@ -10,6 +10,10 @@ import farm3 from '@/assets/gallery/farms/fb_img_1782349948461_2.jpg.asset.json'
 import farm4 from '@/assets/gallery/farms/img_20260508_wa0021.jpg.asset.json';
 import farm5 from '@/assets/gallery/farms/img_20260508_wa0051.jpg.asset.json';
 import farm6 from '@/assets/gallery/farms/img_20260508_wa0053.jpg.asset.json';
+import ship1 from '@/assets/gallery/shipping/ship1.jpg.asset.json';
+import ship2 from '@/assets/gallery/shipping/ship2.jpg.asset.json';
+import ship3 from '@/assets/gallery/shipping/ship3.jpg.asset.json';
+import ship4 from '@/assets/gallery/shipping/ship4.jpg.asset.json';
 
 const galleryItems = [
   { src: farm1.url, category: 'farms', alt: 'Black grape vineyard' },
