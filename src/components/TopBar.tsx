@@ -17,14 +17,14 @@ const TopBar = () => {
             <span className="truncate">info@genex-corp.com</span>
           </a>
         </div>
-        <div className="hidden md:flex items-center gap-3">
+        <div className="flex items-center gap-1.5 md:gap-3">
           <div className="flex items-center gap-1.5">
-            <MapPin className="h-3 w-3" />
-            <span>{t('topbar.location')}</span>
+            <MapPin className="h-3 w-3 shrink-0" />
+            <span className="hidden sm:inline">{t('topbar.location')}</span>
           </div>
-          <span className="text-primary-foreground/30">|</span>
+          <span className="hidden sm:inline text-primary-foreground/30">|</span>
           <div className="flex items-center gap-1.5">
-            <MapPin className="h-3 w-3" />
+            <MapPin className="h-3 w-3 shrink-0" />
             <span>{t('topbar.location.hannover')}</span>
           </div>
         </div>
