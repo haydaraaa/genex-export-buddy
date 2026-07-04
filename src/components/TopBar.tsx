@@ -20,9 +20,9 @@ const TopBar = () => {
         <div className="flex items-center gap-2 md:gap-3 text-[10px] md:text-xs">
           <div className="flex items-center gap-1 shrink-0">
             <MapPin className="h-2.5 w-2.5 md:h-3 md:w-3" />
-            <span className="hidden xs:inline">{t('topbar.location')}</span>
+            <span>{t('topbar.location')}</span>
           </div>
-          <span className="hidden xs:inline text-primary-foreground/30">|</span>
+          <span className="text-primary-foreground/30">|</span>
           <div className="flex items-center gap-1 shrink-0">
             <MapPin className="h-2.5 w-2.5 md:h-3 md:w-3" />
             <span>{t('topbar.location.hannover')}</span>
